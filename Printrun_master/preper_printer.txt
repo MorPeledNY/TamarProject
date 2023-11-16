@@ -1,0 +1,31 @@
+;FLAVORMarlin
+;TIME189
+;Filament used 0.0756319m
+;Layer height 0.1
+;MINX101.2
+;MINY104.2
+;MINZ0.3
+;MAXX118.8
+;MAXY115.8
+;MAXZ1
+;Generated with Cura_SteamEngine 5.2.1
+M140 S60
+M105
+M190 S60
+M104 S210
+M105
+M109 S210
+M82 ;absolute extrusion mode
+; Ender 3 Custom Start G-code
+G92 E0 ; Reset Extruder
+G28 ; Home all axes
+G1 Z2.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed
+G1 X0.1 Y20 Z0.3 F5000.0 ; Move to start position
+
+G92 E0 ; Reset Extruder
+
+G1 Z2.0 F3000 ; Move Z Axis up little to prevent scratching of Heat Bed
+G1 X5 Y20 Z0.5 F5000.0 ; Move over to prevent blob squish
+G92 E0
+G92 E0
+G1 F2400 E-3
