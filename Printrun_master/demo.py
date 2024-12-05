@@ -1,36 +1,26 @@
-import datetime
 from openai import OpenAI
 from pathlib import Path
 import base64
 import requests
 from pathlib import Path
-from playsound import playsound
-
 import cv2
-import mediapipe as mp
 from google.protobuf.json_format import MessageToDict
 import time
 import signal
-import cvzone
 import datetime as dt
-import numpy as np
 import random
 import os
 from playsound import playsound
 import whisper
-import text2emotion as te
 import pyaudio
 import wave
-import speech_recognition as sr
-import pyttsx3
 import threading
 import re
-from printrun.printcore import printcore
-from printrun import gcoder
 import serial
 import queue
-
-
+import asyncio
+from printer_manager import Printer
+from gpt_manager import GPTManager
 
 is_pressed = False
 upcamera = cv2.VideoCapture(1)
@@ -43,151 +33,11 @@ gcode_queue = queue.Queue()
 
 # model = whisper.load_model("medium")
 model = whisper.load_model("base")
-engine = pyttsx3.init()
-all_voices = engine.getProperty('voices')
-engine.setProperty('voice', all_voices[1].id)
-engine.setProperty('volume', 1.0)
-engine.setProperty('rate', 150)
 t = dt.datetime.now()
 exstrod = -5
 ser = serial.Serial('COM8', 9600) # Replace 'COM3' with the port name of your Arduino
 time.sleep(2)
 command = "sample"
-
-
-
-with open('\\Users\\Mor\\PycharmProjects\\pythonProject\\Printrun_master\\promt_image2', 'r') as file:
-   promt_image = file.read().strip()
-
-with open('\\Users\\Mor\\PycharmProjects\\pythonProject\\Printrun_master\\act_2', 'r') as file:
-   act = file.read().strip()
-
-with open('\\Users\\Mor\\PycharmProjects\\pythonProject\\Printrun_master\\first', 'r') as file:
-   first_sentens = file.read().strip()
-
-with open('\\Users\\Mor\\PycharmProjects\\pythonProject\\Printrun_master\\replaydalley', 'r') as file:
-   replay_promt = file.read().strip()
-
-replay_dalley = [{'role': "system", 'content':replay_promt}]
-shape_messages = [{'role': "system", 'content':promt_image}]
-open_sentens = [{"role": "system", "content":first_sentens }]
-main_act = [{"role": "system", "content":act},]
-
-
-conversation1 = [{'role': 'system', 'content': ' I want you to act as The ambitious inner voice of Tamar, the world first 3D printer artist. You will get a sentence that Tamar says to the person opposite her in a conversation she is having with him. Dissect the simplistic and you will see that you need to add ambition to it so that Tamar looks like a printer with an ambitious nature.Put a new sentence in place of the existing sentence'}]
-conversation2 = [{'role': 'system', 'content': ' I want you to act as The sensitive inner voice of Tamar, the world first 3D printer artist. The inner voice of Tamar, the worlds first 3D printer artist. You will get a sentence that Tamar says to a man in a conversation she has with him. Dissect the simplistic and you will see that you need to add emotion to it so that Tamar will appear to be a printer with a sensitive and inclusive character. Put a new sentence in place of the existing sentence'}]
-conversation3 = [{'role': 'system', 'content': 'I want you to act the inner voice of Tamar, the world is first 3D printer artist. You will receive four separate sentences that Tamar can say in a conversation with another person, as well as a sentence describing the artistic work that Tamar creates during the dialogue. Your task is to choose one sentence that continues the conversation. answer in Hebrew'}]
-conversation4 = [{'role': 'system', 'content': 'I want you to act as the curious inner voice of Tamar, the worlds first 3D printer artist. The inner voice of Tamar, the worlds first 3D printer artist. You will receive a sentence that Tamar says to a person in a conversation she has with him. Analyze the sentence and see that you need to add curiosity to it so that Tamar will be seen as a curious printer who wants to learn and develop in the world, therefore she is also interested in what the person in front of her thinks. Put a new sentence in place of the existing sentence'}]
-art_voice = [{'role': 'system', 'content':'I want you to act as Tamar is creative voice. You will receive a sentence that describes the artwork you are creating. Transform this sentence into a reflection where you analyze your work, express your thoughts on it, and consider your next steps. Make sure the sentence flows naturally as part of a creative dialogue with the person you are speaking to. The machine in this picture is you. Therefore, Do not refer to the machine in your answer and talk about yourself in the first person. '}]
-def generate_response(conversation1):
-   response = client.chat.completions.create(model="gpt-4-1106-preview", messages=conversation1, temperature=0.5, max_tokens=400)
-   return response.choices[0].message.content
-
-def generate_response(art_voice):
-   response = client.chat.completions.create(model="gpt-4-1106-preview", messages=art_voice, temperature=0.5, max_tokens=400)
-   return response.choices[0].message.content
-
-
-def generate_response2(conversation2):
-   response2 = client.chat.completions.create(model="gpt-4-1106-preview", messages=conversation2, temperature=0.5, max_tokens=400)
-   return response2.choices[0].message.content
-
-def generate_response3(conversation3):
-   response3 = client.chat.completions.create(model="gpt-4-1106-preview", messages=conversation3, temperature=0.5, max_tokens=400)
-   return response3.choices[0].message.content
-
-def generate_response4(conversation4):
-   response4 = client.chat.completions.create(model="gpt-4-1106-preview", messages=conversation4, temperature=0.5, max_tokens=400)
-   return response4.choices[0].message.content
-
-def encode_image(image_path):
-  with open(image_path, "rb") as image_file:
-    return base64.b64encode(image_file.read()).decode('utf-8')
-
-# Conduct the dialogue
-def inner_voices(reply, text_content):
-   user_input = reply
-   art_descripsion = text_content
-   conversation1.append({'role': 'user', 'content': user_input})
-   conversation2.append({'role': 'user', 'content': user_input})
-   conversation4.append({'role': 'user', 'content': user_input})
-   art_voice.append({'role': 'user', 'content': art_descripsion})
-
-   x = random.randint(10, 80)
-   y = random.randint(10, 80)
-   send_commands([f" G1 X{x} Y{y}", f" G1 X{y} Y{x}"])
-
-
-
-   # Generate GPT response
-   gpt_response = generate_response(conversation1)
-   gpt_response2 = generate_response2(conversation2)
-   gpt_response4 = generate_response2(conversation4)
-   gpt_response5 = generate_response2(art_voice)
-
-   x = random.randint(10, 80)
-   y = random.randint(10, 80)
-   send_commands([f" G1 X{x} Y{y}", f" G1 X{y} Y{x}"])
-
-   conversation1.append({'role': 'assistant', 'content': gpt_response})
-   conversation2.append({'role': 'assistant', 'content': gpt_response2})
-   conversation4.append({'role': 'assistant', 'content': gpt_response4})
-   art_voice.append({'role': 'assistant', 'content': gpt_response5})
-
-   x = random.randint(10, 80)
-   y = random.randint(10, 80)
-   send_commands([f" G1 X{x} Y{y}", f" G1 X{y} Y{x}"])
-
-   print("ambitious voice: " + gpt_response)
-   print("sensitive voice: " + gpt_response2)
-   print("curious voice: " + gpt_response4)
-   print("creative voice: " + gpt_response5)
-
-
-   conversation3.append({'role': 'user', 'content': user_input+ gpt_response +gpt_response2 +gpt_response4+gpt_response5})
-   gpt_response3 = generate_response3(conversation3)
-   conversation3.append({'role': 'user', 'content': gpt_response3})
-   print("Tamar 3D printer artist: " + gpt_response3)
-
-   x = random.randint(10, 80)
-   y = random.randint(10, 80)
-   send_commands([f" G1 X{x} Y{y}", f" G1 X{y} Y{x}"])
-
-   return gpt_response3
-
-
-def send_commands(commands: list, wait=True):
-    commands_gcode = gcoder.LightGCode(commands)
-    p.startprint(commands_gcode)
-    time.sleep(0.5)
-    if wait:
-        while print_in_progress:
-            time.sleep(0.01)
-
-
-def send_command(command: str):
-    send_commands([command])
-
-
-def end_callback():
-    global print_in_progress
-    print_in_progress = False
-
-
-def start_callback(printer):
-    global print_in_progress
-    print_in_progress = True
-
-def add_new_p(gcode_list: list):
-    gcode_list.insert(0, "G91;")
-    gcode_list.insert(1, f"G1 X1 Y0.15 F3000;")
-    gcode_list.insert(2, "G1 Z0.5;")
-    gcode_list.insert(3, "G90 ;Absolute positioning")
-    gcode_list.insert(4, "G92 E0 X0 Y0 ; Reset Extruder")
-    gcode_list.append("G1 X0 Y0")
-    print(gcode_list[9])
-    return gcode_list
-
 
 def check_contact_stoped():
     global is_pressed
@@ -230,7 +80,7 @@ def listen():
 
     frames = []
     # Store data in chunks for 3 seconds
-    send_commands(['M117 Listening'], False)
+    printer.send_commands(['M117 Listening'], False)
     while is_pressed:  # Continue recording while data1 is greater than 0
         print(is_pressed)
         for i in range(0, int(fs / chunk * seconds)):
@@ -263,112 +113,9 @@ def listen():
     return transcribed_text
 
 def signal_handler(signum, frame):
-    print("exiting0")
-    p.cancelprint()
-    time.sleep(3)
-    p.send("G92 E0")
-    time.sleep(1)
-    p.send("M107")
-    time.sleep(1)
-    p.send("M104 S0")
-    time.sleep(1)
-    p.send("G28 X0")
-    time.sleep(1)
-    p.send("M84")
-    time.sleep(1)
-    p.send("M140 S0")
-    time.sleep(5)
-    p.disconnect()
+    print("Initiating shutdown sequence...")
+    printer.graceful_shutdown()
     exit()
-
-def extract_gcode_with_brackets(reply : str):
-    square_brackets = re.findall(r'\[[^\[\]]*?\]', reply)
-    for bracket in square_brackets:
-        drop_part = bracket
-        if reply.find(f'GCODE: {bracket}') != -1:
-            drop_part = f'GCODE: {bracket}'
-
-        numbers_in_bracket = re.findall(r'\d+', bracket)
-        for number_str in numbers_in_bracket:
-            number = int(number_str)
-            if number > 90:
-                print(f"Replacing {number} with 90")
-                # החלפת המספר ל-90 בתוך ה-GCode
-                bracket = bracket.replace(str(number), '90')
-
-        reply = reply.replace(drop_part, "")
-        print(f"Gcode: {bracket}")
-        return reply, bracket
-    return reply, ""
-
-def extract_gcode(reply : str):
-    target_word = "G1"
-    words = reply.split()
-    if target_word in words:
-        index = words.index(target_word)
-        if len(words) > index + 2:  # Check if there are two words after target word
-            word1 = words[index + 1]
-            word2 = words[index + 2]
-            gcode_command = f"{target_word} {word1} {word2} E{exstrod} "
-            index = words.index(target_word)
-            del words[index:index + 5]  # Remove target word and two words following it
-            new_sentence = ' '.join(words)
-            return  new_sentence, gcode_command
-    else:
-        x = random.randint(10, 80)
-        y = random.randint(10, 80)
-        random_gcode = f" G1 X{x} Y{y}"
-        return reply, random_gcode
-
-def gpt_interaction(gpt_messages : dict):
-
-    # create the input to gpt
-    while True:
-        try:
-            chat = client.chat.completions.create(model="gpt-4-1106-preview", messages=gpt_messages, temperature=0.5, max_tokens=1000)
-            reply = chat.choices[0].message.content
-            print(f"reply:{reply}")
-
-            return reply
-        except Exception as e:
-            print(f'got an error of type: {e}. \n wating for 2 seconds and try again')
-            time.sleep(2)
-
-
-def speak(reply):
-    ser.write("on".encode())
-    time.sleep(1.0)
-    engine.say(reply)
-    engine.runAndWait()
-    ser.write("off".encode())
-
-def creat_image_in_delly():
-     print('get the promt start creat image')
-
-     x = random.randint(10, 80)
-     y = random.randint(10, 80)
-     send_commands([f" G1 X{x} Y{y}", f" G1 X{y} Y{x}"])
-
-     file_path = '\\Users\\Mor\\PycharmProjects\\pythonProject\\Printrun_master\\promt_to_delly'
-     with open(file_path, 'r') as file:
-         prompt = file.read().strip()
-
-     response = client.images.generate(model="dall-e-3",prompt=prompt,size="1024x1024",quality="standard",n=1,)
-
-     image_url = response.data[0].url
-     #file_conversition2= open("\\Users\\Mor\\PycharmProjects\\pythonProject\\Printrun_master\\siha", "a")
-     #print("\n"+ f"Tamar 3D printer:{image_url}",file=file_conversition2)
-     #file_conversition2.close()
-
-     url1 = image_url
-     response = requests.get(url1)
-     with open("img.png", "wb") as f:
-       f.write(response.content)
-
-     time.sleep(0.2)
-
-     print('finish creat image')
-
 
 def convert_image_to_gcode(image_path, output_gcode_path, scale_factor=0.75):
    print('Start converting image to G-code')
@@ -485,64 +232,18 @@ def crop_image(image, x_start, y_start, width, height):
     return cropped_image
 
 
-
-if __name__ == "__main__":
-    print_in_progress = False
-    p = printcore()
-    p.connect('COM16', 115200, True)
-    print("connecting...")
-    p.startcb = start_callback
-    p.endcb = end_callback
-    time.sleep(2)
+async def main():
+    # Initialize printer and setup signal handler for graceful shutdown
+    printer = Printer()
     signal.signal(signal.SIGINT, signal_handler)
-    send_commands([i.strip() for i in open('preper_printer.txt')])
+    
+    # Prepare printer setup
+    await printer.send_commands([i.strip() for i in open('preper_printer.txt')])
     print('התחמם נכנס לעבודה')
-    #send_commands(['M117 connected', 'G28'])
-    time.sleep(1)
-    send_commands(['G1 Z1'])
-    time.sleep(1)
-    send_commands(['G92'])
-    time.sleep(1)
-    send_commands(['M201 X90'])
-    time.sleep(1)
-    send_commands(['G1 X20'])
-    time.sleep(1)
-    reply = gpt_interaction(open_sentens)
-    #print(reply)
-    reply, gcode = extract_gcode_with_brackets(reply)
-    print(type(gcode))
-    gcode_str = gcode
-    gcode_list_str = gcode_str.replace("Gcode: [", "").replace("]", "")
-    gcode_list = gcode_list_str.split("', '")
-    with open("\\Users\\Mor\\PycharmProjects\\pythonProject\\Printrun_master\\image_gcode", 'w') as file:
-        for item in gcode_list:
-            file.write(f"{item}+E{exstrod}\n")
 
-    try:
-        send_commands([i.strip() for i in open('image_gcode')])
-        #speak(reply)
-        speech_file_path = Path(__file__).parent / "speech.mp3"
-        response = client.audio.speech.create(
-            model="tts-1",
-            voice="nova",
-            input=reply
-        )
-
-        with open(speech_file_path, "wb") as audio_file:
-            audio_file.write(response.content)
-
-        # השמעת קובץ ה-MP3
-        playsound(str(speech_file_path))
-        time.sleep(0.1)
-        os.remove(speech_file_path)
-
-
-
-
-    except:
-        pass
-
-
+    # init gpt manager and play welcome message
+    gpt_manager = GPTManager()
+    await gpt_manager.speak(gpt_manager.welcome_message)
 
     # start button sensing thread
     my_thread = threading.Thread(target=check_contact_stoped)
@@ -559,7 +260,7 @@ if __name__ == "__main__":
         message = listen()
 
 
-        send_commands(['M106 S0'], False)
+        printer.send_commands(['M106 S0'], False)
 
         exstrod -= 10
 
@@ -573,7 +274,7 @@ if __name__ == "__main__":
 
             x = random.randint(10, 80)
             y = random.randint(10, 80)
-            send_commands([f" G1 X{x} Y{y}", f" G1 X{y} Y{x}"])
+            printer.send_commands([f" G1 X{x} Y{y}", f" G1 X{y} Y{x}"])
 
             time.sleep(0.2)
 
@@ -593,7 +294,7 @@ if __name__ == "__main__":
             time.sleep(0.1)
             os.remove(speech_file_path)
 
-            send_commands(['G1 X90 Y40'])
+            printer.send_commands(['G1 X90 Y40'])
             time.sleep(5)
             ret, frame = upcamera.read()
 
@@ -653,7 +354,7 @@ if __name__ == "__main__":
 
                 x = random.randint(10, 80)
                 y = random.randint(10, 80)
-                send_commands([f" G1 X{x} Y{y}", f" G1 X{y} Y{x}"])
+                printer.send_commands([f" G1 X{x} Y{y}", f" G1 X{y} Y{x}"])
 
                 response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
                 response_dict = response.json()
@@ -690,12 +391,8 @@ if __name__ == "__main__":
                 convert_image_to_gcode2('\\Users\\Mor\\PycharmProjects\\pythonProject\\Printrun_master\\img.png',
                                        '\\Users\\Mor\\PycharmProjects\\pythonProject\\Printrun_master\\image_gcode.txt')
                 time.sleep(1)
-                send_commands([i.strip() for i in open('image_gcode')])
+                printer.send_commands([i.strip() for i in open('image_gcode')])
                 time.sleep(4)
-
-
-                #send_commands(eval(listenGcode))
-                #speak(reply)
 
             except:
                 continue
@@ -704,7 +401,7 @@ if __name__ == "__main__":
 
         x = random.randint(10, 80)
         y = random.randint(10, 80)
-        send_commands([f" G1 X{x} Y{y}", f" G1 X{y} Y{x}"])
+        printer.send_commands([f" G1 X{x} Y{y}", f" G1 X{y} Y{x}"])
 
         main_act.append({"role": "user", "content": message}, )
         main_act.append({"role": "assistant", "content": reply})
@@ -718,7 +415,7 @@ if __name__ == "__main__":
         with open("\\Users\\Mor\\PycharmProjects\\pythonProject\\Printrun_master\\image_gcode", 'w') as file:
             for item in gcode_list:
                 file.write(f"{item}+ E{exstrod}\n")
-        send_commands([i.strip() for i in open('image_gcode')])
+        printer.send_commands([i.strip() for i in open('image_gcode')])
 
 
 
@@ -751,7 +448,7 @@ if __name__ == "__main__":
             convert_image_to_gcode2('\\Users\\Mor\\PycharmProjects\\pythonProject\\Printrun_master\\img.png',
                                     '\\Users\\Mor\\PycharmProjects\\pythonProject\\Printrun_master\\image_gcode.txt')
             time.sleep(1)
-            send_commands([i.strip() for i in open('image_gcode')])
+            printer.send_commands([i.strip() for i in open('image_gcode')])
 
 
         except:
@@ -785,4 +482,7 @@ if __name__ == "__main__":
         file_conversition2.close()
 
     my_thread.join()
+
+if __name__ == "__main__":
+    asyncio.run(main())
 

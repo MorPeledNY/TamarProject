@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "tamar"
+version = "0.1.0"
+description = "3D printer artist"
+authors = ["Nevogarf <nevog@fieldintech.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+openai = "^1.56.2"
+requests = "^2.32.3"
+aiofiles = "^24.1.0"
+aiohttp = "^3.11.9"
+pydub = "^0.25.1"
+simpleaudio = "^1.0.4"
+pyaudio = "^0.2.14"
+serial = "^0.0.97"
+pyserial = "^3.5"
+keyboard = "^0.13.5"
+pyqt5 = "^5.15.11"
+opencv-python = "^4.10.0.84"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

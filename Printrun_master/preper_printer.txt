@@ -24,3 +24,13 @@ G1 X5 Y20 Z0.5 F5000.0 ; Move over to prevent blob squish
 G92 E0
 G92 E0
 G1 F2400 E-3
+
+; Added commands
+G1 Z1 ; Move Z Axis
+G4 S1 ; Wait for 1 second
+G92 ; Reset Extruder
+G4 S1 ; Wait for 1 second
+M201 X90 ; Set max acceleration
+G4 S1 ; Wait for 1 second
+G1 X20 ; Move X Axis
+G4 S1 ; Wait for 1 second
