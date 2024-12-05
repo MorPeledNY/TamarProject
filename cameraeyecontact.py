@@ -1,0 +1,67 @@
+from tkinter import *
+from PIL import Image, ImageTk
+import cv2
+import numpy as np
+import subprocess
+import os
+
+
+
+
+
+
+
+face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+
+eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
+
+cap = cv2.VideoCapture(0)
+is_print = True
+state_count = 0
+while 1:
+    ret, img = cap.read()
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+
+    if len(faces) > 0:
+        if not is_print:
+            state_count += 1
+            if state_count > 5:
+                is_print = not is_print
+                p.resume()
+                print("found eyes. continue")
+        else:
+            state_count = 0
+    else:
+        if is_print:
+            state_count += 1
+            if state_count > 5:
+                is_print = not is_print
+                p.pause()
+                print("eyes just disappeared")
+        else:
+            state_count = 0
+
+    for (x, y, w, h) in faces:
+        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
+        roi_gray = gray[y:y + h, x:x + w]
+        roi_color = img[y:y + h, x:x + w]
+
+        eyes = eye_cascade.detectMultiScale(roi_gray)
+
+        for (ex, ey, ew, eh) in eyes:
+            cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (0, 255, 0), 2)
+
+
+
+
+
+
+
+    cv2.imshow('img', img)
+    k = cv2.waitKey(30) & 0xff
+    if k == 27:
+        break
+
+cap.release()
+cv2.destroyAllWindows()
