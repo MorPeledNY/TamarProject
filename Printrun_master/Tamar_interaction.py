@@ -3,9 +3,9 @@ from gpt_manager import GPTManager
 from audio_input_manager import AudioInputManager
 from printer_manager import Printer, SimulatedPrinter
 
-def is_ready_to_print(printer: Printer, gpt_manager: GPTManager):
+async def is_ready_to_print(printer: Printer, gpt_manager: GPTManager):
     conversation_threshold = 1  # Number of exchanges before considering printing
-    return not printer.print_in_progress and len(gpt_manager.get_conversation_length()) >= conversation_threshold * 2 + 1
+    return not printer.print_in_progress and await gpt_manager.get_conversation_length() >= conversation_threshold * 2 + 1
 
 async def main():
     # Initialize managers
@@ -39,17 +39,18 @@ async def handle_conversations(gpt_manager: GPTManager, audio_input_manager: Aud
         await gpt_manager.process_input(user_input, is_ready_to_print(printer, gpt_manager))
 
         # Emit print_approved event if printer is not busy
-        if not printer.print_in_progress:
+        if await is_ready_to_print(printer, gpt_manager):
             print_approved.set()
 
 async def handle_printing(gpt_manager: GPTManager, printer: Printer, print_approved: asyncio.Event):
     """Handle the printing process based on conversation"""    
     while True:
         # Wait until conversation is long enough and printer is not busy
-        if is_ready_to_print(printer, gpt_manager):
-            
+        if await is_ready_to_print(printer, gpt_manager):
             # Generate image from conversation
             image_path = await gpt_manager.image_from_conversation()
+        else:
+            continue
             
         # Wait for user approval (triggered by next input)
         await print_approved.wait()

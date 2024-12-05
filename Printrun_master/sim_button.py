@@ -8,7 +8,7 @@ def on_button_press():
     """Handle button press event."""
     global s
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.connect(('localhost', 12345))
+    s.connect(('localhost', 13346))
     s.sendall("button_pressed".encode())
 
 def on_button_release():

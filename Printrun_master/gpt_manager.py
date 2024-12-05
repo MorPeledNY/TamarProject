@@ -75,7 +75,6 @@ class GPTManager:
         self.should_stop_current_interaction = asyncio.Event()
         self.audio_playback_object = None
         self.speak_task = None
-        self.ready_to_print = False
         self.print_approved = asyncio.Event()
 
     def load_prompts(self):
@@ -123,13 +122,9 @@ class GPTManager:
             return "blablablabla"
             return None
 
-    async def process_input(self, user_input):
+    async def process_input(self, user_input, ready_to_print):
         """Process user input and generate a response"""
-        if self.ready_to_print:
-            self.ready_to_print = False
-            self.print_approved.set()
-            
-        response = await self.inner_voices_response(user_input)
+        response = await self.inner_voices_response(user_input, ready_to_print)
         if response:
             self.speak_task = asyncio.create_task(self.speak(response))
 
@@ -188,15 +183,15 @@ class GPTManager:
         # Additional cleanup if necessary
         print("Stopped current interaction.")
 
-    async def inner_voices_response(self, user_input):
+    async def inner_voices_response(self, user_input, ready_to_print):
         """Generate a response considering all inner voices in a single API call"""
         # Add printing context if ready to print
         printing_context = """
-        If the ready_to_print flag is True, naturally incorporate into your response that 
+        naturally incorporate into your response that 
         you would like to create an artistic interpretation of our conversation. Make it feel 
         organic and tied to the emotional context of the dialogue. Don't make it sound like 
         a sudden request - it should flow from the conversation naturally.
-        """ if self.ready_to_print else ""
+        """ if ready_to_print else ""
 
         inner_voices_prompt = f"""
         You have four inner voices:
@@ -211,8 +206,11 @@ class GPTManager:
         """
 
         # Add user input to the conversation history
-        with self.lock:
+        await self.lock.acquire()
+        try:
             self.main_conversation.append({'role': 'user', 'content': user_input})
+        finally:
+            self.lock.release()
 
         # Generate the final response using the combined prompt
         final_response = await self.generate_response(self.main_conversation + [
@@ -221,8 +219,11 @@ class GPTManager:
         ])
 
         # Add the final response to the conversation history
-        with self.lock:
+        await self.lock.acquire()
+        try:
             self.main_conversation.append({'role': 'assistant', 'content': final_response})
+        finally:
+            self.lock.release()
 
         print("Tamar 3D printer artist: " + final_response)
         return final_response
@@ -231,28 +232,34 @@ class GPTManager:
         """Generate an image using DALL-E and log the cost."""
         print('Starting image creation')
         
-        response = await self.client.images.generate(
-            model="dall-e-3",
-            prompt=prompt,
-            size="1024x1024",
-            quality="standard",
-            n=1,
-        )
+        try:
+            response = await self.client.images.generate(
+                model="dall-e-3",
+                prompt=prompt,
+                size="1024x1024",
+                quality="standard",
+                n=1,
+            )
 
-        cost = pricing[DALL_E_MODEL]
-        self.log_api_call("dall-e-3", 0, cost)
+            cost = pricing[DALL_E_MODEL]
+            self.log_api_call("dall-e-3", 0, cost)
 
-        image_url = response.data[0].url
+            image_url = response.data[0].url
+            
+            # Download the image asynchronously
+            async with aiohttp.ClientSession() as session:
+                async with session.get(image_url) as response:
+                    image_data = await response.read()
+                    async with aiofiles.open("img.png", "wb") as f:
+                        await f.write(image_data)
+
+            print('Finished creating image')
+            return "img.png"
         
-        # Download the image asynchronously
-        async with aiohttp.ClientSession() as session:
-            async with session.get(image_url) as response:
-                image_data = await response.read()
-                async with aiofiles.open("img.png", "wb") as f:
-                    await f.write(image_data)
-
-        print('Finished creating image')
-        return "img.png"
+        except Exception as e:
+            print(f"Image creation failed: {e}")
+            # Use fallback image
+            return "img.png"
 
     async def encode_image(self, image_path):
         """Encode image to base64"""
@@ -332,22 +339,28 @@ class GPTManager:
             
     async def speech_to_text(self, audio_file_path):
         """Transcribe audio to text using OpenAI's Whisper"""
-        with open(audio_file_path, "rb") as audio_file:
-            transcription = await self.client.audio.transcriptions.create(
+        try:
+            with open(audio_file_path, "rb") as audio_file:
+                transcription = await self.client.audio.transcriptions.create(
                 model="whisper-1",
                 file=audio_file,
                 response_format="json",
-            )
-        return transcription.text
+                )
+            return transcription.text
+        except Exception as e:
+            print(f"Error transcribing audio: {e}")
+            return "blablablabla2"
 
     async def image_from_conversation(self):
         """Generate an image based on the current conversation"""
         dalle_prompt = await self.generate_dalle_prompt()
         image_path = await self.create_dalle_image(dalle_prompt)
-        self.ready_to_print = True
         return image_path
     
     async def get_conversation_length(self):
         """Get the length of the conversation"""
-        with self.lock:
+        await self.lock.acquire()
+        try:
             return len(self.main_conversation)
+        finally:
+            self.lock.release()

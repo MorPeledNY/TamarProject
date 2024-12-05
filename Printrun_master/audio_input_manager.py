@@ -5,7 +5,7 @@ import concurrent.futures
 import os
 
 class AudioInputManager:
-    def __init__(self, host='localhost', port=12345):
+    def __init__(self, host='127.0.0.1', port=8104):
         self.is_button_pressed = False
         self.recording_started = asyncio.Event()
         self.new_input_available = asyncio.Event()
@@ -18,8 +18,11 @@ class AudioInputManager:
 
     async def run(self):
         """Main loop to monitor button and manage audio recording."""
+        print("Starting audio input manager...")
         server = await asyncio.start_server(self.handle_connection, self.host, self.port)
+        print("Server created")
         async with server:
+            print("Server started")
             await server.serve_forever()
 
     async def handle_connection(self, reader, writer):
@@ -47,7 +50,7 @@ class AudioInputManager:
     def start_recording(self):
         """Start recording audio when the button is pressed."""
         self.is_recording = True
-        # self.recording_started.set()  # Emit event to stop GPT tasks
+        self.recording_started.set()  # Emit event to stop GPT tasks
         print("Recording started...")
 
         # Get the current file path
