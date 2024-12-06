@@ -1,4 +1,4 @@
-from openai import AsyncOpenAI
+from openai import AsyncOpenAI, APIError
 from pathlib import Path
 import requests
 import os
@@ -74,15 +74,15 @@ class GPTManager:
         self.lock = asyncio.Lock()
         self.should_stop_current_interaction = asyncio.Event()
         self.audio_playback_object = None
-        self.speak_task = None
+        self.input_task = None
         self.print_approved = asyncio.Event()
 
     def load_prompts(self):
         """Load various prompts from files asynchronously"""
-        base_path = Path(__file__).parent
-        with open(f'{base_path}/promt_image2', 'r') as file:
+        used_files_path = Path(__file__).parent / "used_files"
+        with open(f'{used_files_path}/promt_image2', 'r') as file:
             self.prompt_image = file.read()
-        with open(f'{base_path}/act_2', 'r') as file:
+        with open(f'{used_files_path}/act_2', 'r') as file:
             self.act = file.read()
 
     def log_api_call(self, api_type, tokens, cost):
@@ -118,19 +118,33 @@ class GPTManager:
             
             return response.choices[0].message.content
         except Exception as e:
-            print(f'Error generating response: {e}')
+            # print(f'Error generating response: {e}')
+            await asyncio.sleep(3)
             return "blablablabla"
             return None
 
-    async def process_input(self, user_input, ready_to_print):
+    async def create_input_task(self, user_input, ready_to_print):
+        """Start a task to process user input"""
+        self.input_task = asyncio.create_task(self.process_input_task(user_input, ready_to_print))
+            
+    async def process_input_task(self, user_input, ready_to_print):
         """Process user input and generate a response"""
-        response = await self.inner_voices_response(user_input, ready_to_print)
-        if response:
-            self.speak_task = asyncio.create_task(self.speak(response))
+        try:
+            response = await self.inner_voices_response(user_input, ready_to_print)
+            if response:
+                await self.speak(response)
+                
+        except asyncio.CancelledError as e:
+            print(f"Input task cancelled: {e}")
+            
+        except Exception as e:
+            # Stop the audio playback
+            print(f"Other error in speech generation/playback: {e}")
+            await self.stop_current_interaction()
 
     async def speak(self, text):
         """Convert text to speech using OpenAI's TTS and play it"""
-        speech_file_path = Path(__file__).parent / "speech.mp3"
+        speech_file_path = Path(__file__).parent / "used_files" / "speech.mp3"
         try:
             response = await self.client.audio.speech.create(
                 model="tts-1",
@@ -158,8 +172,25 @@ class GPTManager:
             # Wait for the playback to finish
             self.audio_playback_object.wait_done()
 
-        except asyncio.CancelledError:
-            print("Speech generation or playback was cancelled.")
+        except asyncio.CancelledError as e:
+            # Propagate the error
+            raise e
+            
+        except APIError as api_error:
+            # print(f"OpenAI API Error: {api_error}")
+            # Play haha.mp3 on API error
+            error_audio_path = Path(__file__).parent / "used_files" / "haha.mp3"
+            if os.path.exists(error_audio_path):
+                error_audio = AudioSegment.from_mp3(error_audio_path)
+                self.audio_playback_object = sa.play_buffer(
+                    error_audio.raw_data,
+                    num_channels=error_audio.channels, 
+                    bytes_per_sample=error_audio.sample_width,
+                    sample_rate=error_audio.frame_rate
+                )
+                self.audio_playback_object.wait_done()
+        except Exception as e:
+            raise e
         finally:
             # Remove the generated audio file after playing or cancellation
             if os.path.exists(speech_file_path):
@@ -173,12 +204,8 @@ class GPTManager:
             self.audio_playback_object.stop()
 
         # Cancel the speak task if it's running
-        if self.speak_task:
-            self.speak_task.cancel()
-            try:
-                await self.speak_task
-            except asyncio.CancelledError:
-                print("The speak task was cancelled.")
+        if self.input_task:
+            self.input_task.cancel()
 
         # Additional cleanup if necessary
         print("Stopped current interaction.")
@@ -233,6 +260,7 @@ class GPTManager:
         print('Starting image creation')
         
         try:
+            image_path = Path(__file__).parent / "used_files" / "img.png"
             response = await self.client.images.generate(
                 model="dall-e-3",
                 prompt=prompt,
@@ -250,16 +278,16 @@ class GPTManager:
             async with aiohttp.ClientSession() as session:
                 async with session.get(image_url) as response:
                     image_data = await response.read()
-                    async with aiofiles.open("img.png", "wb") as f:
+                    async with aiofiles.open(image_path, "wb") as f:
                         await f.write(image_data)
 
             print('Finished creating image')
-            return "img.png"
+            return image_path
         
         except Exception as e:
-            print(f"Image creation failed: {e}")
+            # print(f"Image creation failed: {e}")
             # Use fallback image
-            return "img.png"
+            return image_path
 
     async def encode_image(self, image_path):
         """Encode image to base64"""
@@ -348,7 +376,7 @@ class GPTManager:
                 )
             return transcription.text
         except Exception as e:
-            print(f"Error transcribing audio: {e}")
+            # print(f"Error transcribing audio: {e}")
             return "blablablabla2"
 
     async def image_from_conversation(self):

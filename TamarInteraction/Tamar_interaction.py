@@ -1,9 +1,10 @@
 import asyncio
 from gpt_manager import GPTManager
 from audio_input_manager import AudioInputManager
-from printer_manager import Printer, SimulatedPrinter
+from printer_manager import Printer, SimulatedPrinter, RealPrinter
 
 async def is_ready_to_print(printer: Printer, gpt_manager: GPTManager):
+    global last_conversation_length
     conversation_threshold = 1  # Number of exchanges before considering printing
     return not printer.print_in_progress and await gpt_manager.get_conversation_length() >= conversation_threshold * 2 + 1
 
@@ -14,6 +15,10 @@ async def main():
     # printer = Printer()  # Add printer initialization
     printer = SimulatedPrinter()
     print_approved = asyncio.Event()  # Create print_approved event
+    
+    # Keep track of the last conversation length
+    global last_conversation_length
+    last_conversation_length = 0
     
     tasks = [
         asyncio.create_task(audio_input_manager.run()),
@@ -36,7 +41,7 @@ async def handle_conversations(gpt_manager: GPTManager, audio_input_manager: Aud
 
         # Process the new user input
         user_input = await gpt_manager.speech_to_text(audio_input_manager.latest_user_input_path)
-        await gpt_manager.process_input(user_input, is_ready_to_print(printer, gpt_manager))
+        await gpt_manager.create_input_task(user_input, await is_ready_to_print(printer, gpt_manager))
 
         # Emit print_approved event if printer is not busy
         if await is_ready_to_print(printer, gpt_manager):
@@ -45,14 +50,15 @@ async def handle_conversations(gpt_manager: GPTManager, audio_input_manager: Aud
 async def handle_printing(gpt_manager: GPTManager, printer: Printer, print_approved: asyncio.Event):
     """Handle the printing process based on conversation"""    
     while True:
-        # Wait until conversation is long enough and printer is not busy
+        # Wait until the printer is ready to print
         if await is_ready_to_print(printer, gpt_manager):
             # Generate image from conversation
             image_path = await gpt_manager.image_from_conversation()
         else:
+            await asyncio.sleep(0.5)
             continue
             
-        # Wait for user approval (triggered by next input)
+        # Wait approval for the print to start
         await print_approved.wait()
         print_approved.clear()
         

@@ -1,9 +1,45 @@
+import cv2
+from multiprocessing import Process
+from PIL import Image, ImageDraw
+import numpy as np
+import multiprocessing
 import asyncio
+
+# Add Printrun_master to the Python path
+import sys
+import os
+file_path = os.path.dirname(os.path.abspath(__file__))
+parent_path = os.path.dirname(file_path)
+sys.path.append(os.path.abspath(f'{parent_path}/Printrun_master'))
+
 from printrun.printcore import printcore
 from printrun import gcoder
-import cv2
 
 class Printer:
+    def __init__(self):
+        self.print_in_progress = False
+
+    async def connect(self, port='COM16', baudrate=115200, wait=True):
+        """Connect to a printer."""
+        raise NotImplementedError("This method should be overridden by subclasses.")
+
+    async def print_image(self, image_path, scale_factor=0.75):
+        """Print an image."""
+        raise NotImplementedError("This method should be overridden by subclasses.")
+
+    async def send_commands(self, commands: list, wait=True):
+        """Send multiple G-code commands to the printer."""
+        raise NotImplementedError("This method should be overridden by subclasses.")
+
+    async def send_command(self, command: str):
+        """Send a single G-code command."""
+        await self.send_commands([command])
+
+    async def graceful_shutdown(self):
+        """Gracefully shutdown the printer with proper sequence."""
+        raise NotImplementedError("This method should be overridden by subclasses.")
+
+class RealPrinter(Printer):
     _instance = None
     
     def __new__(cls, *args, **kwargs):
@@ -12,9 +48,9 @@ class Printer:
         return cls._instance
     
     def __init__(self, port='COM16', baudrate=115200, wait=True):
+        super().__init__()
         if not hasattr(self, 'printer'):
             self.printer = printcore()
-            self.print_in_progress = False
             asyncio.create_task(self.connect(port, baudrate, wait))
     
     async def connect(self, port, baudrate, wait=True):
@@ -30,7 +66,6 @@ class Printer:
         self.print_in_progress = False
     
     async def send_commands(self, commands: list, wait=True):
-        """Send multiple G-code commands to the printer"""
         commands_gcode = gcoder.LightGCode(commands)
         await asyncio.to_thread(self.printer.startprint, commands_gcode)
         await asyncio.sleep(0.5)
@@ -38,12 +73,7 @@ class Printer:
             while self.print_in_progress:
                 await asyncio.sleep(0.01)
     
-    async def send_command(self, command: str):
-        """Send a single G-code command"""
-        await self.send_commands([command])
-    
     async def graceful_shutdown(self):
-        """Gracefully shutdown the printer with proper sequence"""
         print("Executing graceful shutdown...")
         await asyncio.to_thread(self.printer.cancelprint)
         await asyncio.sleep(3)
@@ -101,7 +131,7 @@ class Printer:
         print('Saved new G-code to file:', output_gcode_path)
         return output_gcode_path
         
-    async def print_image(self, image_path):
+    async def print_image(self, image_path, scale_factor=0.75):
         """Print an image on the printer"""
         # Convert the image to G-code
         gcode_path = await self.convert_image_to_gcode(image_path, 'temp_image.gcode')
@@ -113,19 +143,27 @@ class Printer:
         # Send the gcode commands to the printer
         await self.send_commands(gcode_commands)
 
-class SimulatedPrinter:
+class SimulatedPrinter(Printer):
     def __init__(self):
-        self.print_in_progress = False
+        super().__init__()
 
     async def connect(self, port='COM16', baudrate=115200, wait=True):
-        """Simulate connecting to a printer."""
         print("Simulated connection established.")
 
     async def print_image(self, image_path, scale_factor=0.75):
-        """Simulate printing an image by painting contours."""
         print('Simulating image printing...')
         self.print_in_progress = True
 
+        drawing_process = multiprocessing.Process(target=self.draw_contours_on_image, args=(image_path, 'output_image.png', scale_factor))
+        drawing_process.start()
+
+        while drawing_process.is_alive():
+            await asyncio.sleep(0.1)
+
+        print('Simulated printing complete.')
+        self.print_in_progress = False
+
+    def draw_contours_on_image(self, image_path, output_path, scale_factor=0.75, delay=1):
         # Load the image in grayscale and threshold it
         image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
         if image is None:
@@ -136,20 +174,26 @@ class SimulatedPrinter:
         # Find contours in the image
         contours, _ = cv2.findContours(binary_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-        # Simulate the time taken to print each contour
+        # Create a white image
+        height, width = image.shape
+        output_image = Image.new("RGB", (width, height), "white")
+        draw = ImageDraw.Draw(output_image)
+
         for contour in contours:
-            # Scale the contour points
             scaled_contour = contour * scale_factor
+            for i in range(len(scaled_contour) - 1):
+                start_point = scaled_contour[i][0]
+                end_point = scaled_contour[i + 1][0]
+                # Convert to integers
+                x1, y1 = int(start_point[0]), int(start_point[1])
+                x2, y2 = int(end_point[0]), int(end_point[1])
+                draw.line((x1, y1, x2, y2), fill="red", width=2)
+                output_image.save(output_path)  # Save the image after each line is drawn
 
-            # Simulate moving to the starting point of the contour
-            start_point = scaled_contour[0][0]
-            print(f"Simulated move to X{start_point[0]} Y{start_point[1]}")
+                # Convert PIL image to OpenCV format and display
+                cv_image = cv2.cvtColor(np.array(output_image), cv2.COLOR_RGB2BGR)
+                cv2.imshow('Drawing', cv_image)
+                cv2.waitKey(int(delay))  # Wait for the specified delay in milliseconds
 
-            # Simulate generating G1 commands to follow the contour
-            for point in scaled_contour:
-                x, y = point[0]
-                print(f"Simulated printing at X{x} Y{y}")
-                await asyncio.sleep(0.01)  # Simulate time delay for printing
-
-        print('Simulated printing complete.')
-        self.print_in_progress = False
+        cv2.destroyAllWindows()
+        
