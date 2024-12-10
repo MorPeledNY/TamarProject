@@ -4,6 +4,8 @@ from PIL import Image, ImageDraw
 import numpy as np
 import multiprocessing
 import asyncio
+import requests
+import json
 
 # Add Printrun_master to the Python path
 import sys
@@ -196,4 +198,55 @@ class SimulatedPrinter(Printer):
                 cv2.waitKey(int(delay))  # Wait for the specified delay in milliseconds
 
         cv2.destroyAllWindows()
+        
+class ServerPrinter(Printer):
+    def __init__(self, hostname='10.100.102.50', port=12346):
+        super().__init__()
+        self.server_url = f"http://{hostname}:{port}"
+        self.server_ready = False
+
+    async def connect(self, port='COM16', baudrate=115200, wait=True):
+        ping_url = f"{self.server_url}/ping"
+        try:
+            response = requests.get(ping_url)
+            if response.status_code == 200:
+                self.server_ready = True
+                print(f"Connected to server at {self.server_url}. Server is ready.")
+            else:
+                print(f"Failed to connect to server. Status code: {response.status_code}")
+        except requests.RequestException as e:
+            print(f"Error connecting to server: {e}")
+
+    async def send_commands(self, commands: list, wait=True):
+        if not self.server_ready:
+            print("Server is not ready. Please connect first.")
+            return
+
+        try:
+            # Send the commands as a JSON list in the POST request body
+            response = requests.post(
+                f"{self.server_url}/send_gcode",
+                json={'commands': commands}
+            )
+            if response.status_code == 200:
+                print("Sent all commands successfully.")
+            else:
+                print(f"Failed to send commands. Status code: {response.status_code}")
+        except requests.RequestException as e:
+            print(f"Error sending commands: {e}")
+
+    async def send_command(self, command: str):
+        await self.send_commands([command])
+
+    async def print_image(self, image_path, scale_factor=0.75):
+        print('Sending image G-code to server...')
+        gcode_path = await self.convert_image_to_gcode(image_path, 'temp_image.gcode')
+
+        with open(gcode_path, 'r') as file:
+            gcode_commands = file.readlines()
+
+        await self.send_commands(gcode_commands)
+
+    async def graceful_shutdown(self):
+        print("Executing graceful shutdown... (no commands sent)")
         
