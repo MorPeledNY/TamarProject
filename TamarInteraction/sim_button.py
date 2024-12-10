@@ -16,7 +16,7 @@ def reconnect():
     base_delay = 1  # initial delay in seconds
     for attempt in range(max_retries):
         try:
-            s.connect(('localhost', 12345))
+            s.connect(('10.100.102.50', 12345))
             print("Reconnected to the server.")
             return True
         except socket.error:
@@ -57,7 +57,7 @@ def main():
     base_delay = 1  # initial delay in seconds
     for attempt in range(max_retries):
         try:
-            s.connect(('localhost', 12345))
+            s.connect(('10.100.102.50', 12345))
             break
         except socket.error:
             if attempt < max_retries - 1:

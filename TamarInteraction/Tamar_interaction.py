@@ -1,7 +1,7 @@
 import asyncio
 from gpt_manager import GPTManager
 from audio_input_manager import AudioInputManager
-from printer_manager import Printer, SimulatedPrinter, RealPrinter
+from printer_manager import Printer, SimulatedPrinter, RealPrinter, ServerPrinter
 
 async def is_ready_to_print(printer: Printer, gpt_manager: GPTManager):
     global last_conversation_length
@@ -12,8 +12,7 @@ async def main():
     # Initialize managers
     gpt_manager = GPTManager()
     audio_input_manager = AudioInputManager()
-    # printer = Printer()  # Add printer initialization
-    printer = SimulatedPrinter()
+    printer = ServerPrinter()
     print_approved = asyncio.Event()  # Create print_approved event
     
     # Keep track of the last conversation length

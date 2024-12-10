@@ -5,7 +5,7 @@ import concurrent.futures
 import os
 
 class AudioInputManager:
-    def __init__(self, host='localhost', port=12345):
+    def __init__(self, host='10.100.102.50', port=12345):
         self.is_button_pressed = False
         self.recording_started = asyncio.Event()
         self.new_input_available = asyncio.Event()
