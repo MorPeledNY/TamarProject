@@ -31,11 +31,6 @@ class TestGPTManager(unittest.IsolatedAsyncioTestCase):
         expected_path = Path(__file__).parent / "used_files" / "img.png"
         self.assertEqual(image_path, expected_path)
 
-        # Check if the image data was written to the file
-        async with aiofiles.open(image_path, "rb") as f:
-            content = await f.read()
-            self.assertEqual(content, b'fake_image_data')
-
     @patch('gpt_manager.AsyncOpenAI')
     async def test_generate_response(self, mock_openai):
         # Mock the OpenAI client

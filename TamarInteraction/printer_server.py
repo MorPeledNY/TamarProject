@@ -3,6 +3,7 @@ import cv2
 import numpy as np
 from PIL import Image, ImageDraw
 import os
+from multiprocessing import Process
 
 app = Flask(__name__)
 
@@ -17,9 +18,11 @@ def send_gcode():
     if not commands:
         return jsonify({"error": "No G-code commands provided"}), 400
 
-    # Process the G-code commands
+    # Process the G-code commands in a subprocess
     try:
-        draw_gcode(commands)
+        process = Process(target=draw_gcode, args=(commands,))
+        process.start()
+        process.join()  # Wait for the process to complete
         return jsonify({"status": "G-code processed successfully"}), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
@@ -54,6 +57,9 @@ def draw_gcode(commands, output_path='output_image.png', delay=1):
             start_y = float(part[1:])
     current_position = (start_x, start_y)
 
+    # Before the loop
+    cv2.namedWindow('Drawing', cv2.WINDOW_AUTOSIZE)
+
     # Second pass to draw the lines
     for command in commands:
         if command.startswith('G0') or command.startswith('G1'):
@@ -73,9 +79,11 @@ def draw_gcode(commands, output_path='output_image.png', delay=1):
                 # Convert PIL image to OpenCV format and display
                 cv_image = cv2.cvtColor(np.array(output_image), cv2.COLOR_RGB2BGR)
                 cv2.imshow('Drawing', cv_image)
-                cv2.waitKey(int(delay))  # Wait for the specified delay in milliseconds
+                if cv2.waitKey(int(delay)) & 0xFF == ord('q'):  # Press 'q' to exit
+                    break
 
-    cv2.destroyAllWindows()
+    cv2.destroyWindow('Drawing')
+    # cv2.destroyAllWindows()
     output_image.save(output_path)
 
 if __name__ == '__main__':

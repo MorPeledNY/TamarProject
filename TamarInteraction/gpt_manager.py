@@ -254,29 +254,24 @@ class GPTManager:
                 size="1024x1024",
                 quality="standard",
                 n=1,
+                response_format="b64_json",
             )
 
             cost = pricing[DALL_E_MODEL]
             self.log_api_call(DALL_E_MODEL, amount=0, cost=cost)
-
-            image_url = response.data[0].url
-            print(f"Image URL: {image_url}")
             
-            # Download the image asynchronously
-            async with aiohttp.ClientSession() as session:
-                async with session.get(image_url) as response:
-                    image_data = await response.read()
-                    # print(f"response: {response}")
-                    print(f"image_data: {image_data}")
-                    async with aiofiles.open(image_path, "wb") as f:
-                        await f.write(image_data)
+            # Decode the base64 string to bytes
+            image_data = base64.b64decode(response.data[0].b64_json)
+            with open(image_path, "wb") as f:
+                f.write(image_data)
 
             print('Finished creating image')
             return image_path
         
         except Exception as e:
             print(f"Image creation failed: {e}")
-            return None
+            raise e
+            
 
     async def encode_image(self, image_path):
         """Encode image to base64"""
