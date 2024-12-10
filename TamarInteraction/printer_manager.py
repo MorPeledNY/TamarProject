@@ -36,6 +36,88 @@ class Printer:
     async def send_command(self, command: str):
         """Send a single G-code command."""
         await self.send_commands([command])
+        
+    def euclidean_distance(self, point1, point2):
+        """Calculate the Euclidean distance between two points."""
+        return np.sqrt((point1[0] - point2[0])**2 + (point1[1] - point2[1])**2)
+
+    def get_contour_endpoints(self, contour):
+        """Get the start and end points of a contour."""
+        return contour[0][0], contour[-1][0]
+
+    async def convert_image_to_gcode(self, image_path, output_gcode_path, scale_factor=0.75):
+        """Convert an image to G-code and save it to a file."""
+        print('Start converting image to G-code')
+
+        # Load the image in grayscale and threshold it
+        image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
+        if image is None:
+            raise FileNotFoundError(f"Unable to find or open the image at {image_path}")
+
+        _, binary_image = cv2.threshold(image, 128, 255, cv2.THRESH_BINARY_INV)
+
+        # Find contours in the image
+        contours, _ = cv2.findContours(binary_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        scaled_contours = [contour * scale_factor for contour in contours]
+        
+        # Initialize ordered contours with the first contour
+        ordered_contours = [scaled_contours[0]]
+        remaining_indices = list(range(1, len(scaled_contours)))
+
+        # For each remaining contour, find the best position to insert it
+        while remaining_indices:
+            best_contour_idx = None
+            best_position = 0
+            best_score = float('inf')
+            
+            for idx in remaining_indices:
+                contour = scaled_contours[idx]
+                contour_start, contour_end = self.get_contour_endpoints(contour)
+                
+                # Try each possible position in the ordered list
+                for pos in range(len(ordered_contours) + 1):
+                    score = 0
+                    
+                    # Calculate distance from previous contour's end to current contour's start
+                    if pos > 0:
+                        prev_end = self.get_contour_endpoints(ordered_contours[pos-1])[1]
+                        score += self.euclidean_distance(prev_end, contour_start)
+                    
+                    # Calculate distance from current contour's end to next contour's start
+                    if pos < len(ordered_contours):
+                        next_start = self.get_contour_endpoints(ordered_contours[pos])[0]
+                        score += self.euclidean_distance(contour_end, next_start)
+                    
+                    if score < best_score:
+                        best_score = score
+                        best_contour_idx = idx
+                        best_position = pos
+            
+            # Insert the best contour at the best position
+            ordered_contours.insert(best_position, scaled_contours[best_contour_idx])
+            remaining_indices.remove(best_contour_idx)
+
+        # Generate G-code from ordered contours
+        gcode = []
+        for i, contour in enumerate(ordered_contours):
+            # Move to the starting point of the contour
+            start_point = contour[0][0]
+            if i > 0:
+                # Add a G0 command to move to the start of the new contour without drawing
+                gcode.append(f"G0 X{start_point[0]} Y{start_point[1]}")
+
+            # Generate G1 commands to follow the contour
+            for point in contour:
+                x, y = point[0]
+                gcode.append(f"G1 X{x} Y{y}")
+
+        # Save the G-code to a file
+        with open(output_gcode_path, 'w') as file:
+            for line in gcode:
+                file.write(line + '\n')
+
+        print('Saved new G-code to file:', output_gcode_path)
+        return output_gcode_path
 
     async def graceful_shutdown(self):
         """Gracefully shutdown the printer with proper sequence."""
@@ -95,43 +177,6 @@ class RealPrinter(Printer):
             
         await asyncio.to_thread(self.printer.disconnect)
         print("Printer shutdown complete")
-    
-    async def convert_image_to_gcode(self, image_path, output_gcode_path, scale_factor=0.75):
-        """Convert an image to G-code and save it to a file."""
-        print('Start converting image to G-code')
-
-        # Load the image in grayscale and threshold it
-        image = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
-        if image is None:
-            raise FileNotFoundError(f"Unable to find or open the image at {image_path}")
-
-        _, binary_image = cv2.threshold(image, 128, 255, cv2.THRESH_BINARY_INV)
-
-        # Find contours in the image
-        contours, _ = cv2.findContours(binary_image, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-        gcode = []
-
-        for contour in contours:
-            # Scale the contour points
-            scaled_contour = contour * scale_factor
-
-            # Move to the starting point of the contour
-            start_point = scaled_contour[0][0]
-            gcode.append(f"G0 X{start_point[0]} Y{start_point[1]}")
-
-            # Generate G1 commands to follow the contour
-            for point in scaled_contour:
-                x, y = point[0]
-                gcode.append(f"G1 X{x} Y{y}")
-
-        # Save the G-code to a file
-        with open(output_gcode_path, 'w') as file:
-            for line in gcode:
-                file.write(line + '\n')
-
-        print('Saved new G-code to file:', output_gcode_path)
-        return output_gcode_path
         
     async def print_image(self, image_path, scale_factor=0.75):
         """Print an image on the printer"""

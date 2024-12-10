@@ -25,13 +25,36 @@ def send_gcode():
         return jsonify({"error": str(e)}), 500
 
 def draw_gcode(commands, output_path='output_image.png', delay=1):
-    # Create a blank white image
-    width, height = 500, 500  # Example dimensions
+    # First pass to determine the maximum width and height
+    max_x = max_y = 0
+    for command in commands:
+        if command.startswith('G0') or command.startswith('G1'):
+            parts = command.split()
+            for part in parts:
+                if part.startswith('X'):
+                    x = float(part[1:])
+                    max_x = max(max_x, x)
+                elif part.startswith('Y'):
+                    y = float(part[1:])
+                    max_y = max(max_y, y)
+
+    # Create a blank white image with determined dimensions
+    width, height = int(max_x), int(max_y)
     output_image = Image.new("RGB", (width, height), "white")
     draw = ImageDraw.Draw(output_image)
 
-    current_position = (0, 0)
+    # Use the first command's position as the starting point
+    first_command = commands[0]
+    parts = first_command.split()
+    start_x = start_y = 0
+    for part in parts:
+        if part.startswith('X'):
+            start_x = float(part[1:])
+        elif part.startswith('Y'):
+            start_y = float(part[1:])
+    current_position = (start_x, start_y)
 
+    # Second pass to draw the lines
     for command in commands:
         if command.startswith('G0') or command.startswith('G1'):
             parts = command.split()
@@ -43,13 +66,14 @@ def draw_gcode(commands, output_path='output_image.png', delay=1):
                     y = float(part[1:])
             if x is not None and y is not None:
                 new_position = (x, y)
-                draw.line([current_position, new_position], fill="red", width=2)
+                if command.startswith('G1'):  # Only draw lines for G1 commands
+                    draw.line([current_position, new_position], fill="red", width=2)
                 current_position = new_position
 
                 # Convert PIL image to OpenCV format and display
                 cv_image = cv2.cvtColor(np.array(output_image), cv2.COLOR_RGB2BGR)
                 cv2.imshow('Drawing', cv_image)
-                cv2.waitKey(int(delay * 1000))  # Wait for the specified delay in milliseconds
+                cv2.waitKey(int(delay))  # Wait for the specified delay in milliseconds
 
     cv2.destroyAllWindows()
     output_image.save(output_path)
