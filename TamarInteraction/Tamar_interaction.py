@@ -12,6 +12,7 @@ async def is_ready_to_print(printer: Printer, gpt_manager: GPTManager):
 async def main():
     # Initialize managers
     gpt_manager = GPTManager()
+    await gpt_manager.initialize_tamar_response()
     audio_input_manager = AudioInputManager()
     printer = ServerPrinter()
     await printer.connect()

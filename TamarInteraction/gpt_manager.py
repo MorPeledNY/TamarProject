@@ -85,12 +85,12 @@ class GPTManager:
         with open(f'{used_files_path}/act_2', 'r') as file:
             self.act = file.read()
 
-    def log_api_call(self, api_type, tokens, cost):
+    def log_api_call(self, api_type, amount, cost):
         """Log API call details to a JSON file."""
         log_entry = {
             "api_type": api_type,
             "datetime": datetime.now().isoformat(),
-            "tokens": tokens,
+            "tokens": amount,
             "cost": cost
         }
         try:
@@ -114,13 +114,11 @@ class GPTManager:
             tokens_input = response.usage.prompt_tokens
             tokens_output = response.usage.completion_tokens
             cost = pricing[model]["prompt"] * (tokens_input / 1000) + pricing[model]["completion"] * (tokens_output / 1000)
-            self.log_api_call(model, tokens={"input": tokens_input, "output": tokens_output}, cost=cost)
+            self.log_api_call(model, amount={"input": tokens_input, "output": tokens_output}, cost=cost)
             
             return response.choices[0].message.content
         except Exception as e:
-            # print(f'Error generating response: {e}')
-            await asyncio.sleep(3)
-            return "blablablabla"
+            print(f'Error generating response: {e}')
             return None
 
     async def create_input_task(self, user_input, ready_to_print):
@@ -177,18 +175,7 @@ class GPTManager:
             raise e
             
         except APIError as api_error:
-            # print(f"OpenAI API Error: {api_error}")
-            # Play haha.mp3 on API error
-            error_audio_path = Path(__file__).parent / "used_files" / "haha.mp3"
-            if os.path.exists(error_audio_path):
-                error_audio = AudioSegment.from_mp3(error_audio_path)
-                self.audio_playback_object = sa.play_buffer(
-                    error_audio.raw_data,
-                    num_channels=error_audio.channels, 
-                    bytes_per_sample=error_audio.sample_width,
-                    sample_rate=error_audio.frame_rate
-                )
-                self.audio_playback_object.wait_done()
+            print(f"OpenAI API Error: {api_error}")
         except Exception as e:
             raise e
         finally:
@@ -262,7 +249,7 @@ class GPTManager:
         try:
             image_path = Path(__file__).parent / "used_files" / "img.png"
             response = await self.client.images.generate(
-                model="dall-e-3",
+                model=DALL_E_MODEL,
                 prompt=prompt,
                 size="1024x1024",
                 quality="standard",
@@ -270,14 +257,17 @@ class GPTManager:
             )
 
             cost = pricing[DALL_E_MODEL]
-            self.log_api_call("dall-e-3", 0, cost)
+            self.log_api_call(DALL_E_MODEL, amount=0, cost=cost)
 
             image_url = response.data[0].url
+            print(f"Image URL: {image_url}")
             
             # Download the image asynchronously
             async with aiohttp.ClientSession() as session:
                 async with session.get(image_url) as response:
                     image_data = await response.read()
+                    # print(f"response: {response}")
+                    print(f"image_data: {image_data}")
                     async with aiofiles.open(image_path, "wb") as f:
                         await f.write(image_data)
 
@@ -285,9 +275,8 @@ class GPTManager:
             return image_path
         
         except Exception as e:
-            # print(f"Image creation failed: {e}")
-            # Use fallback image
-            return image_path
+            print(f"Image creation failed: {e}")
+            return None
 
     async def encode_image(self, image_path):
         """Encode image to base64"""
@@ -334,7 +323,7 @@ class GPTManager:
                 tokens_input = result['usage']['prompt_tokens']
                 tokens_output = result['usage']['completion_tokens']
                 cost = pricing[VISION_MODEL]["prompt"] * (tokens_input / 1000) + pricing[VISION_MODEL]["completion"] * (tokens_output / 1000)
-                self.log_api_call(VISION_MODEL, tokens={"input": tokens_input, "output": tokens_output}, cost=cost)
+                self.log_api_call(VISION_MODEL, amount={"input": tokens_input, "output": tokens_output}, cost=cost)
                 return result['choices'][0]['message']['content']
             
 
@@ -365,6 +354,9 @@ class GPTManager:
             self.main_conversation.append({'role': 'assistant', 'content': self.initial_response})
             print("Tamar's initial greeting:", self.initial_response)
             
+        # play the initial response
+        await self.speak(self.initial_response)
+            
     async def speech_to_text(self, audio_file_path):
         """Transcribe audio to text using OpenAI's Whisper"""
         try:
@@ -376,8 +368,8 @@ class GPTManager:
                 )
             return transcription.text
         except Exception as e:
-            # print(f"Error transcribing audio: {e}")
-            return "blablablabla2"
+            print(f"Error transcribing audio: {e}")
+            return None
 
     async def image_from_conversation(self):
         """Generate an image based on the current conversation"""
