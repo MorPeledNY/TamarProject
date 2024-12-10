@@ -253,7 +253,7 @@ class ServerPrinter(Printer):
     async def connect(self, port='COM16', baudrate=115200, wait=True):
         ping_url = f"{self.server_url}/ping"
         try:
-            response = requests.get(ping_url)
+            response = await asyncio.to_thread(requests.get, ping_url)
             if response.status_code == 200:
                 self.server_ready = True
                 print(f"Connected to server at {self.server_url}. Server is ready.")
@@ -269,7 +269,8 @@ class ServerPrinter(Printer):
 
         try:
             # Send the commands as a JSON list in the POST request body
-            response = requests.post(
+            response = await asyncio.to_thread(
+                requests.post,
                 f"{self.server_url}/send_gcode",
                 json={'commands': commands}
             )
