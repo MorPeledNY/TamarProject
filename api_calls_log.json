@@ -14,3 +14,22 @@
 {"api_type": "dall-e-3", "datetime": "2024-12-10T15:33:26.489838", "tokens": 0, "cost": 0.05}
 {"api_type": "dall-e-3", "datetime": "2024-12-10T15:34:44.113667", "tokens": 0, "cost": 0.05}
 {"api_type": "dall-e-3", "datetime": "2024-12-10T15:35:59.063236", "tokens": 0, "cost": 0.05}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-10T15:43:30.096545", "tokens": {"input": 945, "output": 249}, "cost": 0.000846}
+{"api_type": "tts-1", "datetime": "2024-12-10T15:43:45.443071", "tokens": 447, "cost": 0.006705}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-10T15:45:01.155353", "tokens": {"input": 822, "output": 81}, "cost": 0.0005325}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-10T15:45:01.387081", "tokens": {"input": 1340, "output": 199}, "cost": 0.0009685000000000001}
+{"api_type": "tts-1", "datetime": "2024-12-10T15:45:06.668526", "tokens": 473, "cost": 0.007095}
+{"api_type": "dall-e-3", "datetime": "2024-12-10T15:45:42.714547", "tokens": 0, "cost": 0.05}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-10T15:46:16.491267", "tokens": {"input": 1054, "output": 132}, "cost": 0.0007250000000000001}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-10T15:46:17.914142", "tokens": {"input": 1646, "output": 394}, "cost": 0.001414}
+{"api_type": "tts-1", "datetime": "2024-12-10T15:46:26.613188", "tokens": 700, "cost": 0.010499999999999999}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-10T15:48:33.774925", "tokens": {"input": 945, "output": 300}, "cost": 0.0009224999999999999}
+{"api_type": "tts-1", "datetime": "2024-12-10T15:48:42.700525", "tokens": 317, "cost": 0.004755}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-10T15:49:44.270665", "tokens": {"input": 887, "output": 70}, "cost": 0.0005485}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-10T15:49:45.485534", "tokens": {"input": 1419, "output": 242}, "cost": 0.0010725}
+{"api_type": "tts-1", "datetime": "2024-12-10T15:49:48.999678", "tokens": 255, "cost": 0.003825}
+{"api_type": "dall-e-3", "datetime": "2024-12-10T15:50:14.346280", "tokens": 0, "cost": 0.05}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-10T15:50:27.172984", "tokens": {"input": 1766, "output": 229}, "cost": 0.0012265}
+{"api_type": "tts-1", "datetime": "2024-12-10T15:50:31.142298", "tokens": 245, "cost": 0.003675}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-10T15:50:56.920743", "tokens": {"input": 1401, "output": 83}, "cost": 0.0008250000000000001}
+{"api_type": "dall-e-3", "datetime": "2024-12-10T15:51:11.406485", "tokens": 0, "cost": 0.05}

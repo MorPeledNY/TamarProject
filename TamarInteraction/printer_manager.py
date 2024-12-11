@@ -131,7 +131,7 @@ class RealPrinter(Printer):
             cls._instance = super().__new__(cls)
         return cls._instance
     
-    def __init__(self, port='COM16', baudrate=115200, wait=True):
+    def __init__(self, port='/dev/ttyAMA0', baudrate=115200, wait=True):
         super().__init__()
         if not hasattr(self, 'printer'):
             self.printer = printcore()
@@ -264,8 +264,16 @@ class ServerPrinter(Printer):
 
     async def send_commands(self, commands: list, wait=True):
         if not self.server_ready:
-            print("Server is not ready. Please connect first.")
-            return
+            try:
+                await self.connect()
+            except Exception as e:
+                print(f"Error connecting to server: {e}")
+                return
+            
+            # Still not ready?
+            if not self.server_ready:
+                print("Server is not ready. Make sure the server is running.")
+                return
 
         try:
             # Send the commands as a JSON list in the POST request body

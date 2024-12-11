@@ -14,7 +14,7 @@ async def main():
     gpt_manager = GPTManager()
     await gpt_manager.initialize_tamar_response()
     audio_input_manager = AudioInputManager()
-    printer = ServerPrinter()
+    printer = RealPrinter()
     await printer.connect()
     print_approved = asyncio.Event()  # Create print_approved event
     

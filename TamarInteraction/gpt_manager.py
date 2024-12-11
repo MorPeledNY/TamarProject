@@ -346,7 +346,6 @@ class GPTManager:
         """Initialize Tamar's initial response and add it to the conversation."""
         self.initial_response = await self.generate_response(self.main_conversation)
         if self.initial_response:
-            self.main_conversation.append({'role': 'assistant', 'content': self.initial_response})
             print("Tamar's initial greeting:", self.initial_response)
             
         # play the initial response
