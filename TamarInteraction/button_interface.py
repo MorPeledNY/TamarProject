@@ -56,12 +56,11 @@ class SocketButton(ButtonInterface):
             await asyncio.sleep(0.1)
 
 class GPIOButton(ButtonInterface):
-    def __init__(self, pin=17):
+    def __init__(self, pin=17, bounce_time=0.2):
         super().__init__()
-        # Create a PiGPIO pin factory
         factory = PiGPIOFactory()
         try:
-            self.button = Button(pin, pull_up=True, pin_factory=factory)
+            self.button = Button(pin, pull_up=True, pin_factory=factory, bounce_time=bounce_time)
             print("GPIO button initialized successfully")
         except Exception as e:
             raise RuntimeError(f"Failed to initialize GPIO button: {str(e)}")

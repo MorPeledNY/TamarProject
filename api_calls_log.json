@@ -33,3 +33,803 @@
 {"api_type": "tts-1", "datetime": "2024-12-10T15:50:31.142298", "tokens": 245, "cost": 0.003675}
 {"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-10T15:50:56.920743", "tokens": {"input": 1401, "output": 83}, "cost": 0.0008250000000000001}
 {"api_type": "dall-e-3", "datetime": "2024-12-10T15:51:11.406485", "tokens": 0, "cost": 0.05}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T08:59:00.555555", "tokens": {"input": 945, "output": 391}, "cost": 0.001059}
+{"api_type": "tts-1", "datetime": "2024-12-12T08:59:09.237857", "tokens": 419, "cost": 0.006285}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T09:01:38.591975", "tokens": {"input": 945, "output": 400}, "cost": 0.0010725}
+{"api_type": "tts-1", "datetime": "2024-12-12T09:01:47.140377", "tokens": 416, "cost": 0.00624}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T09:04:06.252107", "tokens": {"input": 945, "output": 399}, "cost": 0.0010710000000000001}
+{"api_type": "tts-1", "datetime": "2024-12-12T09:04:14.588395", "tokens": 417, "cost": 0.006254999999999999}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T09:05:14.242783", "tokens": {"input": 1129, "output": 349}, "cost": 0.001088}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T09:05:15.881685", "tokens": {"input": 943, "output": 83}, "cost": 0.000596}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T09:08:39.587318", "tokens": {"input": 945, "output": 399}, "cost": 0.0010710000000000001}
+{"api_type": "tts-1", "datetime": "2024-12-12T09:09:14.792235", "tokens": 418, "cost": 0.0062699999999999995}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T09:10:12.965331", "tokens": {"input": 1133, "output": 213}, "cost": 0.0008860000000000001}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T09:10:14.880795", "tokens": {"input": 809, "output": 87}, "cost": 0.000535}
+{"api_type": "dall-e-3", "datetime": "2024-12-12T09:10:28.237272", "tokens": 0, "cost": 0.05}
+{"api_type": "tts-1", "datetime": "2024-12-12T09:10:43.373669", "tokens": 225, "cost": 0.003375}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T09:11:24.492072", "tokens": {"input": 1476, "output": 165}, "cost": 0.0009855}
+{"api_type": "tts-1", "datetime": "2024-12-12T09:11:27.951896", "tokens": 173, "cost": 0.0025949999999999997}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T09:11:46.200360", "tokens": {"input": 1030, "output": 78}, "cost": 0.0006320000000000001}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T09:11:55.715682", "tokens": {"input": 1633, "output": 245}, "cost": 0.0011840000000000002}
+{"api_type": "dall-e-3", "datetime": "2024-12-12T09:11:57.925609", "tokens": 0, "cost": 0.05}
+{"api_type": "tts-1", "datetime": "2024-12-12T09:11:59.634177", "tokens": 264, "cost": 0.00396}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T09:12:40.782730", "tokens": {"input": 1924, "output": 263}, "cost": 0.0013565}
+{"api_type": "tts-1", "datetime": "2024-12-12T09:12:46.477096", "tokens": 284, "cost": 0.004259999999999999}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T09:13:44.673875", "tokens": {"input": 2293, "output": 309}, "cost": 0.00161}
+{"api_type": "tts-1", "datetime": "2024-12-12T09:13:48.980561", "tokens": 313, "cost": 0.0046949999999999995}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T09:15:36.489921", "tokens": {"input": 2020, "output": 94}, "cost": 0.0011510000000000001}
+{"api_type": "dall-e-3", "datetime": "2024-12-12T09:15:53.860089", "tokens": 0, "cost": 0.05}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T10:32:00.290267", "tokens": {"input": 945, "output": 203}, "cost": 0.000777}
+{"api_type": "tts-1", "datetime": "2024-12-12T10:32:12.165852", "tokens": 363, "cost": 0.005444999999999999}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T10:45:09.502838", "tokens": {"input": 945, "output": 399}, "cost": 0.0010710000000000001, "response_time": 3.502703905105591}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T10:52:12.049478", "tokens": {"input": 945, "output": 305}, "cost": 0.00093, "response_time": 4.042642116546631}
+{"api_type": "tts-1", "datetime": "2024-12-12T10:52:23.503310", "tokens": 336, "cost": 0.00504, "response_time": 11.380100965499878}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T10:53:25.260118", "tokens": {"input": 1109, "output": 142}, "cost": 0.0007675, "response_time": 2.2600491046905518}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T10:53:27.891530", "tokens": {"input": 726, "output": 75}, "cost": 0.0004755, "response_time": 1.8914899826049805}
+{"api_type": "tts-1", "datetime": "2024-12-12T10:53:30.009749", "tokens": 143, "cost": 0.0021449999999999998, "response_time": 4.748396158218384}
+{"api_type": "dall-e-3", "datetime": "2024-12-12T10:53:47.781983", "tokens": 0, "cost": 0.05, "response_time": 9.781897068023682}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T10:54:55.870310", "tokens": {"input": 1365, "output": 210}, "cost": 0.0009975000000000001, "response_time": 2.8701159954071045}
+{"api_type": "tts-1", "datetime": "2024-12-12T10:54:59.367728", "tokens": 224, "cost": 0.00336, "response_time": 3.493708848953247}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T10:58:28.849524", "tokens": {"input": 945, "output": 136}, "cost": 0.0006765, "response_time": 1.849395990371704}
+{"api_type": "tts-1", "datetime": "2024-12-12T10:58:37.918652", "tokens": 690, "cost": 0.010349999999999998, "response_time": 9.066927909851074}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T21:47:55.571515", "tokens": {"input": 945, "output": 400}, "cost": 0.0010725, "response_time": 3.571244955062866}
+{"api_type": "tts-1", "datetime": "2024-12-12T21:48:01.858194", "tokens": 434, "cost": 0.006509999999999999, "response_time": 6.278439044952393}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T21:48:50.262473", "tokens": {"input": 945, "output": 399}, "cost": 0.0010710000000000001, "response_time": 3.262363910675049}
+{"api_type": "tts-1", "datetime": "2024-12-12T21:48:59.482988", "tokens": 414, "cost": 0.006209999999999999, "response_time": 9.218593120574951}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T21:50:15.115751", "tokens": {"input": 945, "output": 171}, "cost": 0.000729, "response_time": 2.1156439781188965}
+{"api_type": "tts-1", "datetime": "2024-12-12T21:50:35.594370", "tokens": 305, "cost": 0.004575, "response_time": 20.477304935455322}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T21:51:13.433562", "tokens": {"input": 1129, "output": 277}, "cost": 0.00098, "response_time": 2.4335200786590576}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T21:51:16.732774", "tokens": {"input": 871, "output": 80}, "cost": 0.0005555, "response_time": 1.7327330112457275}
+{"api_type": "tts-1", "datetime": "2024-12-12T21:51:18.427390", "tokens": 292, "cost": 0.004379999999999999, "response_time": 4.99245810508728}
+{"api_type": "dall-e-3", "datetime": "2024-12-12T21:51:30.812963", "tokens": 0, "cost": 0.05, "response_time": 1.8129220008850098}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T21:52:38.996556", "tokens": {"input": 945, "output": 265}, "cost": 0.00087, "response_time": 1.9964470863342285}
+{"api_type": "tts-1", "datetime": "2024-12-12T21:52:45.408744", "tokens": 475, "cost": 0.007124999999999999, "response_time": 6.410125970840454}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T21:53:33.557811", "tokens": {"input": 1121, "output": 195}, "cost": 0.000853, "response_time": 2.557766914367676}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T21:53:35.124084", "tokens": {"input": 785, "output": 84}, "cost": 0.0005185, "response_time": 1.1240429878234863}
+{"api_type": "tts-1", "datetime": "2024-12-12T21:53:44.579619", "tokens": 463, "cost": 0.006945, "response_time": 11.020566940307617}
+{"api_type": "dall-e-3", "datetime": "2024-12-12T21:53:47.007497", "tokens": 0, "cost": 0.05, "response_time": 2.007441997528076}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T21:53:59.466436", "tokens": {"input": 1454, "output": 260}, "cost": 0.001117, "response_time": 2.4663949012756348}
+{"api_type": "tts-1", "datetime": "2024-12-12T21:54:09.091467", "tokens": 592, "cost": 0.008879999999999999, "response_time": 9.623057126998901}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T22:04:32.513104", "tokens": {"input": 945, "output": 400}, "cost": 0.0010725, "response_time": 2.5129730701446533}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T22:04:34.928013", "tokens": {"input": 945, "output": 381}, "cost": 0.001044, "response_time": 4.927884101867676}
+{"api_type": "tts-1", "datetime": "2024-12-12T22:04:41.480955", "tokens": 423, "cost": 0.006345, "response_time": 8.965909004211426}
+{"api_type": "tts-1", "datetime": "2024-12-12T22:04:44.910065", "tokens": 611, "cost": 0.009165, "response_time": 9.980476140975952}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T22:05:47.248412", "tokens": {"input": 1103, "output": 237}, "cost": 0.000907, "response_time": 2.2483088970184326}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T22:05:49.107679", "tokens": {"input": 818, "output": 75}, "cost": 0.0005214999999999999, "response_time": 1.1076409816741943}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T22:05:49.386255", "tokens": {"input": 1103, "output": 344}, "cost": 0.0010674999999999999, "response_time": 3.386197090148926}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T22:05:50.693855", "tokens": {"input": 925, "output": 67}, "cost": 0.000563, "response_time": 1.6938130855560303}
+{"api_type": "tts-1", "datetime": "2024-12-12T22:05:51.310228", "tokens": 254, "cost": 0.00381, "response_time": 4.059340953826904}
+{"api_type": "tts-1", "datetime": "2024-12-12T22:05:58.066799", "tokens": 610, "cost": 0.00915, "response_time": 8.679286003112793}
+{"api_type": "dall-e-3", "datetime": "2024-12-12T22:06:02.591814", "tokens": 0, "cost": 0.05, "response_time": 1.5917730331420898}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T22:07:30.748817", "tokens": {"input": 945, "output": 400}, "cost": 0.0010725, "response_time": 2.7487099170684814}
+{"api_type": "tts-1", "datetime": "2024-12-12T22:07:38.509435", "tokens": 441, "cost": 0.006615, "response_time": 7.759148836135864}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T22:08:38.594631", "tokens": {"input": 1171, "output": 270}, "cost": 0.0009905, "response_time": 2.5945920944213867}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-12T22:08:40.187718", "tokens": {"input": 885, "output": 79}, "cost": 0.0005610000000000001, "response_time": 1.187669038772583}
+{"api_type": "tts-1", "datetime": "2024-12-12T22:08:46.765610", "tokens": 505, "cost": 0.007575, "response_time": 8.169833898544312}
+{"api_type": "dall-e-3", "datetime": "2024-12-12T22:08:52.437483", "tokens": 0, "cost": 0.05, "response_time": 1.4374420642852783}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            {"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-23T12:25:18.462067", "tokens": {"input": 945, "output": 246}, "cost": 0.0008415, "response_time": 3.4620308876037598}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-23T22:28:29.259846", "tokens": {"input": 13, "output": 34}, "cost": 5.750000000000001e-05, "response_time": 1.2596890926361084}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-23T22:31:56.754164", "tokens": {"input": 945, "output": 348}, "cost": 0.0009945, "response_time": 3.7541210651397705}
+{"api_type": "tts-1", "datetime": "2024-12-23T22:32:05.315482", "tokens": 548, "cost": 0.00822, "response_time": 8.55441689491272}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-23T22:33:11.056099", "tokens": {"input": 1115, "output": 311}, "cost": 0.0010240000000000002, "response_time": 4.056051969528198}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-23T22:33:12.723306", "tokens": {"input": 897, "output": 70}, "cost": 0.0005535000000000001, "response_time": 1.7232611179351807}
+{"api_type": "tts-1", "datetime": "2024-12-23T22:33:17.703402", "tokens": 321, "cost": 0.004815, "response_time": 6.646169185638428}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-23T22:47:06.262816", "tokens": {"input": 945, "output": 400}, "cost": 0.0010725, "response_time": 6.262763977050781}
+{"api_type": "tts-1", "datetime": "2024-12-23T22:47:15.365452", "tokens": 428, "cost": 0.0064199999999999995, "response_time": 9.100797891616821}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-23T22:48:08.653708", "tokens": {"input": 945, "output": 400}, "cost": 0.0010725, "response_time": 4.653642892837524}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-23T22:50:09.138236", "tokens": {"input": 945, "output": 400}, "cost": 0.0010725, "response_time": 5.1381940841674805}
+{"api_type": "tts-1", "datetime": "2024-12-23T22:50:19.342894", "tokens": 420, "cost": 0.006299999999999999, "response_time": 10.201215028762817}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-23T22:54:27.437999", "tokens": {"input": 945, "output": 400}, "cost": 0.0010725, "response_time": 4.437819004058838}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-23T22:56:21.228002", "tokens": {"input": 945, "output": 400}, "cost": 0.0010725, "response_time": 4.227962970733643}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-24T07:51:02.201820", "tokens": {"input": 945, "output": 391}, "cost": 0.001059, "response_time": 5.201765060424805}
+{"api_type": "tts-1", "datetime": "2024-12-24T07:51:09.689153", "tokens": 594, "cost": 0.00891, "response_time": 7.477831125259399}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T08:58:35.225140", "tokens": {"input": 945, "output": 400}, "cost": 0.0010725, "response_time": 3.2251009941101074}
+{"api_type": "tts-1", "datetime": "2024-12-26T08:58:48.125265", "tokens": 415, "cost": 0.006225, "response_time": 12.888468027114868}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T09:00:28.721606", "tokens": {"input": 945, "output": 400}, "cost": 0.0010725, "response_time": 4.721569061279297}
+{"api_type": "tts-1", "datetime": "2024-12-26T09:00:34.734713", "tokens": 413, "cost": 0.006194999999999999, "response_time": 6.010729789733887}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T09:01:35.101986", "tokens": {"input": 1173, "output": 179}, "cost": 0.0008550000000000001, "response_time": 3.1019399166107178}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T09:01:36.479577", "tokens": {"input": 794, "output": 76}, "cost": 0.0005110000000000001, "response_time": 1.4795379638671875}
+{"api_type": "tts-1", "datetime": "2024-12-26T09:01:39.019239", "tokens": 182, "cost": 0.00273, "response_time": 3.914842128753662}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T09:01:52.715524", "tokens": 0, "cost": 0.05, "response_time": 1.7154920101165771}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T09:02:14.683749", "tokens": {"input": 1525, "output": 370}, "cost": 0.0013175, "response_time": 3.683706045150757}
+{"api_type": "tts-1", "datetime": "2024-12-26T09:02:25.686925", "tokens": 589, "cost": 0.008834999999999999, "response_time": 11.001716136932373}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T09:02:49.145534", "tokens": {"input": 1245, "output": 94}, "cost": 0.0007635000000000001, "response_time": 1.1454849243164062}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T09:03:07.600610", "tokens": 0, "cost": 0.05, "response_time": 1.6005809307098389}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T09:30:16.167054", "tokens": {"input": 945, "output": 290}, "cost": 0.0009075, "response_time": 4.16692590713501}
+{"api_type": "tts-1", "datetime": "2024-12-26T09:30:30.428853", "tokens": 338, "cost": 0.00507, "response_time": 14.252708911895752}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T09:31:16.168582", "tokens": {"input": 1127, "output": 162}, "cost": 0.0008065, "response_time": 2.1685049533843994}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T09:31:17.770955", "tokens": {"input": 754, "output": 80}, "cost": 0.000497, "response_time": 1.7709119319915771}
+{"api_type": "tts-1", "datetime": "2024-12-26T09:31:20.244364", "tokens": 173, "cost": 0.0025949999999999997, "response_time": 4.063767910003662}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T09:31:36.661406", "tokens": 0, "cost": 0.05, "response_time": 1.6613409519195557}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T09:31:51.552008", "tokens": {"input": 1407, "output": 171}, "cost": 0.00096, "response_time": 2.5519509315490723}
+{"api_type": "tts-1", "datetime": "2024-12-26T09:31:54.747719", "tokens": 186, "cost": 0.00279, "response_time": 3.1866860389709473}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T09:34:19.965939", "tokens": {"input": 945, "output": 400}, "cost": 0.0010725, "response_time": 4.965831995010376}
+{"api_type": "tts-1", "datetime": "2024-12-26T09:34:26.271623", "tokens": 426, "cost": 0.00639, "response_time": 6.298443794250488}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T09:35:41.825086", "tokens": {"input": 1107, "output": 396}, "cost": 0.0011475, "response_time": 13.825033903121948}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T09:35:43.576149", "tokens": {"input": 978, "output": 68}, "cost": 0.0005909999999999999, "response_time": 1.5761079788208008}
+{"api_type": "tts-1", "datetime": "2024-12-26T09:35:50.147345", "tokens": 438, "cost": 0.0065699999999999995, "response_time": 8.311331033706665}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T09:35:59.259272", "tokens": 0, "cost": 0.05, "response_time": 2.2592151165008545}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T09:36:53.707743", "tokens": {"input": 1721, "output": 400}, "cost": 0.0014605, "response_time": 4.707701921463013}
+{"api_type": "tts-1", "datetime": "2024-12-26T09:37:04.575146", "tokens": 455, "cost": 0.006825, "response_time": 10.858745813369751}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T09:38:41.217738", "tokens": {"input": 2074, "output": 400}, "cost": 0.001637, "response_time": 4.217658996582031}
+{"api_type": "tts-1", "datetime": "2024-12-26T09:38:49.825884", "tokens": 438, "cost": 0.0065699999999999995, "response_time": 8.596922159194946}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T11:16:23.415919", "tokens": {"input": 945, "output": 400}, "cost": 0.0010725, "response_time": 4.41580605506897}
+{"api_type": "tts-1", "datetime": "2024-12-26T11:16:28.477020", "tokens": 411, "cost": 0.0061649999999999995, "response_time": 5.051674127578735}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:06:06.544461", "tokens": {"input": 556, "output": 87}, "cost": 0.0004085, "response_time": 1.5443060398101807}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:06:09.521426", "tokens": {"input": 1121, "output": 297}, "cost": 0.001006, "response_time": 4.521385908126831}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:06:14.946139", "tokens": 310, "cost": 0.00465, "response_time": 5.3995420932769775}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:06:20.728178", "tokens": 0, "cost": 0.05, "response_time": 4.728113889694214}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:11:46.061146", "tokens": {"input": 556, "output": 83}, "cost": 0.0004025000000000001, "response_time": 2.060976028442383}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:11:47.506009", "tokens": {"input": 1075, "output": 187}, "cost": 0.0008179999999999999, "response_time": 2.5059709548950195}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:11:48.315860", "tokens": {"input": 563, "output": 76}, "cost": 0.00039549999999999996, "response_time": 1.3158209323883057}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:11:49.210449", "tokens": {"input": 1102, "output": 158}, "cost": 0.0007880000000000001, "response_time": 2.2104060649871826}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:11:51.020061", "tokens": 194, "cost": 0.00291, "response_time": 3.4938812255859375}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:11:54.379247", "tokens": 168, "cost": 0.00252, "response_time": 5.159754037857056}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:11:59.489771", "tokens": 0, "cost": 0.05, "response_time": 1.4897310733795166}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:12:06.326919", "tokens": 0, "cost": 0.05, "response_time": 1.3268780708312988}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:12:28.459391", "tokens": {"input": 931, "output": 59}, "cost": 0.000554, "response_time": 1.4593510627746582}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:12:30.479444", "tokens": {"input": 1446, "output": 226}, "cost": 0.001062, "response_time": 3.479401111602783}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:12:32.098142", "tokens": {"input": 1165, "output": 65}, "cost": 0.00068, "response_time": 1.0981030464172363}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:12:34.775657", "tokens": {"input": 1722, "output": 296}, "cost": 0.001305, "response_time": 3.7755939960479736}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:12:35.061848", "tokens": 236, "cost": 0.0035399999999999997, "response_time": 4.572750091552734}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:12:45.026008", "tokens": 0, "cost": 0.05, "response_time": 2.0259549617767334}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:12:46.132913", "tokens": 0, "cost": 0.05, "response_time": 2.132874011993408}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:13:09.771436", "tokens": {"input": 2015, "output": 273}, "cost": 0.0014170000000000003, "response_time": 3.771397113800049}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:13:10.270613", "tokens": {"input": 1490, "output": 76}, "cost": 0.000859, "response_time": 2.2705729007720947}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:20:16.960803", "tokens": {"input": 556, "output": 78}, "cost": 0.00039500000000000006, "response_time": 0.9606339931488037}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:20:19.445525", "tokens": {"input": 1095, "output": 325}, "cost": 0.0010350000000000001, "response_time": 3.445478916168213}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:21:17.495917", "tokens": {"input": 556, "output": 92}, "cost": 0.00041600000000000003, "response_time": 1.4956080913543701}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:24:07.550263", "tokens": {"input": 556, "output": 97}, "cost": 0.00042350000000000005, "response_time": 1.5501151084899902}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:24:10.382408", "tokens": {"input": 1087, "output": 282}, "cost": 0.0009665, "response_time": 4.382369041442871}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:24:15.137290", "tokens": 300, "cost": 0.0045, "response_time": 4.737418174743652}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:24:21.304071", "tokens": 0, "cost": 0.05, "response_time": 1.3039970397949219}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:25:02.321871", "tokens": {"input": 854, "output": 82}, "cost": 0.00055, "response_time": 1.3218319416046143}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:25:05.568723", "tokens": {"input": 1479, "output": 400}, "cost": 0.0013395, "response_time": 4.568681955337524}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:25:11.731683", "tokens": 413, "cost": 0.006194999999999999, "response_time": 6.154922008514404}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:25:21.616184", "tokens": 0, "cost": 0.05, "response_time": 1.616128921508789}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:26:50.623834", "tokens": {"input": 1317, "output": 101}, "cost": 0.0008100000000000001, "response_time": 1.6237928867340088}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:26:52.990688", "tokens": {"input": 1904, "output": 341}, "cost": 0.0014635, "response_time": 3.990648031234741}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:26:57.806958", "tokens": 362, "cost": 0.00543, "response_time": 4.8074281215667725}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:27:01.273149", "tokens": 0, "cost": 0.05, "response_time": 1.2731080055236816}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:31:12.779459", "tokens": {"input": 1113, "output": 69}, "cost": 0.00066, "response_time": 1.7792959213256836}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:31:13.297030", "tokens": {"input": 556, "output": 95}, "cost": 0.00042050000000000003, "response_time": 2.296992063522339}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:31:15.335119", "tokens": 72, "cost": 0.0010799999999999998, "response_time": 2.534257173538208}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:31:32.677803", "tokens": 0, "cost": 0.05, "response_time": 1.6777400970458984}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:32:59.420441", "tokens": {"input": 556, "output": 80}, "cost": 0.000398, "response_time": 1.4202899932861328}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:33:00.461548", "tokens": {"input": 1085, "output": 137}, "cost": 0.000748, "response_time": 2.4615049362182617}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:33:04.023535", "tokens": 147, "cost": 0.002205, "response_time": 3.5426809787750244}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:33:17.660060", "tokens": 0, "cost": 0.05, "response_time": 1.6600170135498047}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:35:44.530194", "tokens": {"input": 1081, "output": 39}, "cost": 0.0005989999999999999, "response_time": 1.5300469398498535}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:35:44.834307", "tokens": {"input": 556, "output": 97}, "cost": 0.00042350000000000005, "response_time": 1.8342669010162354}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:35:46.610696", "tokens": 43, "cost": 0.000645, "response_time": 2.061196804046631}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:35:59.881444", "tokens": 0, "cost": 0.05, "response_time": 1.8813750743865967}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:38:01.504194", "tokens": {"input": 608, "output": 87}, "cost": 0.0004345, "response_time": 1.504154920578003}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:38:02.358485", "tokens": {"input": 1203, "output": 158}, "cost": 0.0008385, "response_time": 2.358444929122925}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:38:05.880561", "tokens": 176, "cost": 0.0026399999999999996, "response_time": 3.51383900642395}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:38:16.560774", "tokens": 0, "cost": 0.05, "response_time": 1.5607330799102783}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:41:31.248734", "tokens": {"input": 556, "output": 101}, "cost": 0.0004295000000000001, "response_time": 1.2485840320587158}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:41:32.595895", "tokens": {"input": 1085, "output": 242}, "cost": 0.0009055000000000001, "response_time": 2.595850944519043}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:41:36.767174", "tokens": 255, "cost": 0.003825, "response_time": 4.153398036956787}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:41:44.503705", "tokens": 0, "cost": 0.05, "response_time": 1.5036449432373047}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:44:12.507754", "tokens": {"input": 1095, "output": 94}, "cost": 0.0006885000000000001, "response_time": 1.5076019763946533}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:44:12.526823", "tokens": {"input": 556, "output": 96}, "cost": 0.00042200000000000007, "response_time": 1.5267820358276367}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:44:15.701134", "tokens": 102, "cost": 0.00153, "response_time": 3.1336710453033447}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:44:26.198573", "tokens": 0, "cost": 0.05, "response_time": 1.198533058166504}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:46:54.944813", "tokens": {"input": 556, "output": 71}, "cost": 0.0003845, "response_time": 0.9446649551391602}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:46:59.692159", "tokens": {"input": 1183, "output": 393}, "cost": 0.0011810000000000002, "response_time": 5.692117929458618}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:47:07.564356", "tokens": 667, "cost": 0.010005, "response_time": 7.8518311977386475}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:47:27.063079", "tokens": 0, "cost": 0.05, "response_time": 2.0630300045013428}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:48:15.972479", "tokens": {"input": 1013, "output": 72}, "cost": 0.0006145, "response_time": 0.9724390506744385}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:48:18.987752", "tokens": {"input": 1592, "output": 400}, "cost": 0.001396, "response_time": 3.987710952758789}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:48:23.802610", "tokens": 420, "cost": 0.006299999999999999, "response_time": 4.806390047073364}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:48:28.489481", "tokens": 0, "cost": 0.05, "response_time": 1.48944091796875}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:49:19.553858", "tokens": {"input": 1454, "output": 102}, "cost": 0.00088, "response_time": 1.5538039207458496}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:49:23.640689", "tokens": {"input": 2053, "output": 400}, "cost": 0.0016265000000000001, "response_time": 5.640650987625122}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:49:32.088112", "tokens": 424, "cost": 0.006359999999999999, "response_time": 8.438515901565552}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:49:34.256085", "tokens": 0, "cost": 0.05, "response_time": 2.2560439109802246}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:50:22.387812", "tokens": {"input": 1904, "output": 106}, "cost": 0.001111, "response_time": 1.387761116027832}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:50:25.649760", "tokens": {"input": 2505, "output": 400}, "cost": 0.0018525, "response_time": 4.649718999862671}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:50:31.373345", "tokens": 422, "cost": 0.00633, "response_time": 5.7142908573150635}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:50:35.141034", "tokens": 0, "cost": 0.05, "response_time": 2.1409709453582764}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:53:10.856719", "tokens": {"input": 556, "output": 85}, "cost": 0.00040550000000000004, "response_time": 1.8565690517425537}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:53:11.041278", "tokens": {"input": 1101, "output": 88}, "cost": 0.0006825, "response_time": 2.0412399768829346}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:53:13.664397", "tokens": 98, "cost": 0.00147, "response_time": 2.6054399013519287}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:53:23.710860", "tokens": 0, "cost": 0.05, "response_time": 1.7108170986175537}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:55:40.291862", "tokens": {"input": 556, "output": 89}, "cost": 0.00041150000000000003, "response_time": 1.2916760444641113}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:55:41.220026", "tokens": {"input": 1085, "output": 216}, "cost": 0.0008665000000000001, "response_time": 2.2199881076812744}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:55:44.914296", "tokens": 229, "cost": 0.003435, "response_time": 3.6694159507751465}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:55:53.228235", "tokens": 0, "cost": 0.05, "response_time": 2.228153944015503}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:56:30.104852", "tokens": {"input": 787, "output": 85}, "cost": 0.000521, "response_time": 1.1047999858856201}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:56:31.759073", "tokens": {"input": 1364, "output": 249}, "cost": 0.0010555, "response_time": 2.7590320110321045}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:56:36.738108", "tokens": 262, "cost": 0.00393, "response_time": 4.970471143722534}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:56:43.408126", "tokens": 0, "cost": 0.05, "response_time": 1.4080851078033447}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:57:30.553349", "tokens": {"input": 1075, "output": 83}, "cost": 0.000662, "response_time": 1.5532910823822021}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T12:57:32.788248", "tokens": {"input": 1654, "output": 319}, "cost": 0.0013055, "response_time": 3.7882089614868164}
+{"api_type": "tts-1", "datetime": "2024-12-26T12:57:37.161546", "tokens": 331, "cost": 0.004965, "response_time": 4.36383581161499}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T12:57:46.276422", "tokens": 0, "cost": 0.05, "response_time": 1.2763779163360596}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T13:01:20.890993", "tokens": {"input": 556, "output": 103}, "cost": 0.00043250000000000005, "response_time": 1.8908441066741943}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T13:01:21.222084", "tokens": {"input": 1109, "output": 140}, "cost": 0.0007645, "response_time": 2.2220449447631836}
+{"api_type": "tts-1", "datetime": "2024-12-26T13:01:26.200576", "tokens": 146, "cost": 0.0021899999999999997, "response_time": 4.956334114074707}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T13:01:34.142955", "tokens": 0, "cost": 0.05, "response_time": 2.142911911010742}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T13:02:32.165164", "tokens": {"input": 723, "output": 77}, "cost": 0.000477, "response_time": 1.1651129722595215}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T13:02:33.547070", "tokens": {"input": 1322, "output": 238}, "cost": 0.001018, "response_time": 2.5470309257507324}
+{"api_type": "tts-1", "datetime": "2024-12-26T13:02:37.096482", "tokens": 243, "cost": 0.003645, "response_time": 3.5417659282684326}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T13:02:45.414595", "tokens": 0, "cost": 0.05, "response_time": 1.4145290851593018}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T13:56:30.719207", "tokens": {"input": 556, "output": 89}, "cost": 0.00041150000000000003, "response_time": 1.7189850807189941}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T13:56:31.840884", "tokens": {"input": 1107, "output": 214}, "cost": 0.0008745, "response_time": 2.8408429622650146}
+{"api_type": "tts-1", "datetime": "2024-12-26T13:56:36.255126", "tokens": 226, "cost": 0.00339, "response_time": 4.389048099517822}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T13:56:51.254626", "tokens": 0, "cost": 0.05, "response_time": 2.254585027694702}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T13:57:29.676490", "tokens": {"input": 796, "output": 92}, "cost": 0.000536, "response_time": 1.676448106765747}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T13:57:32.301713", "tokens": {"input": 1383, "output": 321}, "cost": 0.001173, "response_time": 4.301671981811523}
+{"api_type": "tts-1", "datetime": "2024-12-26T13:57:40.175518", "tokens": 335, "cost": 0.005025, "response_time": 7.865354061126709}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T13:57:45.531530", "tokens": 0, "cost": 0.05, "response_time": 1.531486988067627}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T14:05:48.206653", "tokens": {"input": 556, "output": 91}, "cost": 0.00041450000000000005, "response_time": 1.2064850330352783}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T14:05:48.777199", "tokens": {"input": 1081, "output": 165}, "cost": 0.000788, "response_time": 1.7771599292755127}
+{"api_type": "tts-1", "datetime": "2024-12-26T14:05:52.762866", "tokens": 170, "cost": 0.00255, "response_time": 3.965251922607422}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T14:06:03.449219", "tokens": 0, "cost": 0.05, "response_time": 1.449160099029541}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T14:09:47.912500", "tokens": {"input": 1113, "output": 143}, "cost": 0.000771, "response_time": 1.9123499393463135}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T14:09:47.919123", "tokens": {"input": 556, "output": 112}, "cost": 0.00044600000000000005, "response_time": 1.9190831184387207}
+{"api_type": "tts-1", "datetime": "2024-12-26T14:09:51.697070", "tokens": 146, "cost": 0.0021899999999999997, "response_time": 3.738585948944092}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T14:09:59.694629", "tokens": 0, "cost": 0.05, "response_time": 1.6945569515228271}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T14:13:37.345115", "tokens": {"input": 556, "output": 79}, "cost": 0.00039650000000000004, "response_time": 1.3449280261993408}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T14:13:40.210877", "tokens": {"input": 1093, "output": 400}, "cost": 0.0011465, "response_time": 4.2108330726623535}
+{"api_type": "tts-1", "datetime": "2024-12-26T14:13:45.626915", "tokens": 412, "cost": 0.00618, "response_time": 5.398265838623047}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T14:13:53.767787", "tokens": 0, "cost": 0.05, "response_time": 1.7677090167999268}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T14:15:14.133177", "tokens": {"input": 556, "output": 92}, "cost": 0.00041600000000000003, "response_time": 1.1330270767211914}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T14:15:15.468627", "tokens": {"input": 1087, "output": 262}, "cost": 0.0009365, "response_time": 3.4685869216918945}
+{"api_type": "tts-1", "datetime": "2024-12-26T14:15:20.515994", "tokens": 271, "cost": 0.004065, "response_time": 5.023730993270874}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T14:15:30.961765", "tokens": 0, "cost": 0.05, "response_time": 1.9617230892181396}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T14:17:28.765571", "tokens": {"input": 556, "output": 100}, "cost": 0.00042800000000000005, "response_time": 2.7654221057891846}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T14:17:28.787500", "tokens": {"input": 1085, "output": 165}, "cost": 0.00079, "response_time": 2.787461042404175}
+{"api_type": "tts-1", "datetime": "2024-12-26T14:17:32.191806", "tokens": 173, "cost": 0.0025949999999999997, "response_time": 3.370405912399292}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T14:21:36.139080", "tokens": {"input": 556, "output": 92}, "cost": 0.00041600000000000003, "response_time": 1.138909101486206}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T14:21:37.267237", "tokens": {"input": 1077, "output": 199}, "cost": 0.0008370000000000001, "response_time": 2.2671990394592285}
+{"api_type": "tts-1", "datetime": "2024-12-26T14:21:41.321357", "tokens": 208, "cost": 0.00312, "response_time": 4.020560026168823}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T14:21:49.336764", "tokens": 0, "cost": 0.05, "response_time": 1.3367230892181396}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T14:23:00.382429", "tokens": {"input": 556, "output": 85}, "cost": 0.00040550000000000004, "response_time": 1.3822650909423828}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T14:23:01.978406", "tokens": {"input": 1117, "output": 251}, "cost": 0.000935, "response_time": 2.978365898132324}
+{"api_type": "tts-1", "datetime": "2024-12-26T14:23:05.930057", "tokens": 262, "cost": 0.00393, "response_time": 3.9343509674072266}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T14:23:12.217631", "tokens": 0, "cost": 0.05, "response_time": 2.2175679206848145}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T14:23:45.588807", "tokens": {"input": 838, "output": 78}, "cost": 0.000536, "response_time": 1.5887560844421387}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T14:23:47.363078", "tokens": {"input": 1399, "output": 231}, "cost": 0.001046, "response_time": 2.3630359172821045}
+{"api_type": "tts-1", "datetime": "2024-12-26T14:23:53.991712", "tokens": 247, "cost": 0.003705, "response_time": 6.62065315246582}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T14:24:03.310077", "tokens": 0, "cost": 0.05, "response_time": 1.3100249767303467}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T14:24:29.424200", "tokens": {"input": 1100, "output": 65}, "cost": 0.0006475000000000001, "response_time": 1.424138069152832}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2024-12-26T14:24:35.258623", "tokens": {"input": 1833, "output": 276}, "cost": 0.0013305, "response_time": 7.25858211517334}
+{"api_type": "tts-1", "datetime": "2024-12-26T14:24:42.206722", "tokens": 290, "cost": 0.00435, "response_time": 6.939689874649048}
+{"api_type": "dall-e-3", "datetime": "2024-12-26T14:24:45.701911", "tokens": 0, "cost": 0.05, "response_time": 1.7018558979034424}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:16:44.054265", "tokens": {"input": 556, "output": 82}, "cost": 0.00040100000000000004, "response_time": 2.0540599822998047}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:16:45.621807", "tokens": {"input": 1073, "output": 234}, "cost": 0.0008875, "response_time": 2.621767044067383}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:16:49.585319", "tokens": 235, "cost": 0.0035249999999999995, "response_time": 3.9385550022125244}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:17:02.181058", "tokens": 0, "cost": 0.05, "response_time": 2.1810059547424316}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:17:41.506681", "tokens": {"input": 799, "output": 84}, "cost": 0.0005255, "response_time": 1.5066230297088623}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:17:42.805403", "tokens": {"input": 1400, "output": 185}, "cost": 0.0009775, "response_time": 2.805361032485962}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:17:43.321568", "tokens": {"input": 556, "output": 92}, "cost": 0.00041600000000000003, "response_time": 1.321394920349121}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:17:44.009819", "tokens": {"input": 1157, "output": 167}, "cost": 0.0008290000000000001, "response_time": 2.0097880363464355}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:17:48.103670", "tokens": 201, "cost": 0.003015, "response_time": 5.28852391242981}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:17:51.331317", "tokens": 403, "cost": 0.006045, "response_time": 7.254660129547119}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:17:57.668108", "tokens": 0, "cost": 0.05, "response_time": 1.6680629253387451}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:17:59.625396", "tokens": 0, "cost": 0.05, "response_time": 1.625291109085083}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:18:30.365738", "tokens": {"input": 774, "output": 62}, "cost": 0.00048, "response_time": 1.365649938583374}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:18:31.629408", "tokens": {"input": 1391, "output": 197}, "cost": 0.0009910000000000001, "response_time": 2.6293649673461914}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:18:32.625912", "tokens": {"input": 1035, "output": 116}, "cost": 0.0006915, "response_time": 1.6258430480957031}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:18:33.550534", "tokens": {"input": 1652, "output": 195}, "cost": 0.0011185000000000001, "response_time": 2.5504839420318604}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:18:37.089403", "tokens": 207, "cost": 0.0031049999999999997, "response_time": 3.5287811756134033}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:18:38.028610", "tokens": 500, "cost": 0.0075, "response_time": 6.382385015487671}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:18:44.320749", "tokens": 0, "cost": 0.05, "response_time": 1.3207199573516846}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:18:52.623397", "tokens": 0, "cost": 0.05, "response_time": 1.623331069946289}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:19:35.046703", "tokens": {"input": 1030, "output": 66}, "cost": 0.0006140000000000001, "response_time": 1.046658992767334}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:19:36.771056", "tokens": {"input": 1703, "output": 244}, "cost": 0.0012175, "response_time": 2.771023988723755}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:19:37.135309", "tokens": {"input": 1289, "output": 73}, "cost": 0.000754, "response_time": 1.135270118713379}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:19:39.527238", "tokens": {"input": 1962, "output": 348}, "cost": 0.001503, "response_time": 3.5271708965301514}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:19:43.268976", "tokens": 547, "cost": 0.008205, "response_time": 6.492202043533325}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:19:47.565526", "tokens": 367, "cost": 0.0055049999999999995, "response_time": 8.026407957077026}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:19:50.060348", "tokens": 0, "cost": 0.05, "response_time": 2.0603060722351074}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:19:51.929662", "tokens": 0, "cost": 0.05, "response_time": 1.9296250343322754}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:20:33.481664", "tokens": {"input": 1361, "output": 72}, "cost": 0.0007885, "response_time": 1.4816210269927979}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:20:34.213928", "tokens": {"input": 1724, "output": 84}, "cost": 0.000988, "response_time": 1.213886022567749}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:20:35.207003", "tokens": {"input": 2034, "output": 271}, "cost": 0.0014234999999999999, "response_time": 3.206965923309326}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:20:36.733751", "tokens": {"input": 2397, "output": 365}, "cost": 0.001746, "response_time": 3.733711004257202}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:20:44.791798", "tokens": 565, "cost": 0.008474999999999998, "response_time": 9.579125165939331}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:20:47.422964", "tokens": 388, "cost": 0.00582, "response_time": 10.67894697189331}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:20:47.904570", "tokens": 0, "cost": 0.05, "response_time": 1.9045350551605225}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:20:50.098651", "tokens": 0, "cost": 0.05, "response_time": 2.0986099243164062}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:22:08.589885", "tokens": {"input": 1719, "output": 93}, "cost": 0.000999, "response_time": 1.5898449420928955}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:22:09.209947", "tokens": {"input": 2176, "output": 107}, "cost": 0.0012485000000000003, "response_time": 2.2099080085754395}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:22:10.536119", "tokens": {"input": 2813, "output": 297}, "cost": 0.0018520000000000001, "response_time": 3.536078929901123}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:22:12.107809", "tokens": {"input": 2356, "output": 400}, "cost": 0.001778, "response_time": 5.107774972915649}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:22:20.508040", "tokens": 317, "cost": 0.004755, "response_time": 9.961267948150635}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:22:25.451012", "tokens": 0, "cost": 0.05, "response_time": 1.4509689807891846}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:22:26.229463", "tokens": 0, "cost": 0.05, "response_time": 1.2294330596923828}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:22:26.571473", "tokens": 731, "cost": 0.010964999999999999, "response_time": 14.458564043045044}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:24:35.334931", "tokens": {"input": 2189, "output": 108}, "cost": 0.0012565, "response_time": 1.3348910808563232}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:24:37.041281", "tokens": {"input": 2542, "output": 84}, "cost": 0.001397, "response_time": 1.0412418842315674}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:24:37.661518", "tokens": {"input": 3202, "output": 341}, "cost": 0.0021125, "response_time": 3.6614699363708496}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:24:39.890940", "tokens": {"input": 3555, "output": 400}, "cost": 0.0023775000000000003, "response_time": 3.890852928161621}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:24:45.156904", "tokens": 737, "cost": 0.011054999999999999, "response_time": 7.490748882293701}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:24:46.352044", "tokens": 0, "cost": 0.05, "response_time": 1.352013111114502}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:24:46.378626", "tokens": 425, "cost": 0.006375, "response_time": 6.4656150341033936}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:24:51.441990", "tokens": 0, "cost": 0.05, "response_time": 1.4419479370117188}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:27:12.374477", "tokens": {"input": 2787, "output": 105}, "cost": 0.001551, "response_time": 2.374440908432007}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:27:14.708047", "tokens": {"input": 3862, "output": 400}, "cost": 0.0025310000000000003, "response_time": 4.708012104034424}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:27:15.120185", "tokens": {"input": 3200, "output": 92}, "cost": 0.001738, "response_time": 1.1201450824737549}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:27:18.156846", "tokens": {"input": 4275, "output": 400}, "cost": 0.0027375000000000003, "response_time": 4.1568028926849365}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:27:23.147042", "tokens": 410, "cost": 0.006149999999999999, "response_time": 8.433533906936646}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:27:23.908749", "tokens": 0, "cost": 0.05, "response_time": 1.9087181091308594}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:27:24.257718", "tokens": 424, "cost": 0.006359999999999999, "response_time": 6.088025093078613}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:27:26.144306", "tokens": 0, "cost": 0.05, "response_time": 1.1442649364471436}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:28:45.657041", "tokens": {"input": 3476, "output": 84}, "cost": 0.001864, "response_time": 1.6570069789886475}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:28:46.424578", "tokens": {"input": 3889, "output": 86}, "cost": 0.0020735, "response_time": 1.424536943435669}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:28:49.170010", "tokens": {"input": 4231, "output": 400}, "cost": 0.0027155, "response_time": 5.16996693611145}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:28:49.292677", "tokens": {"input": 4644, "output": 400}, "cost": 0.002922, "response_time": 4.292635917663574}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:28:54.727415", "tokens": 421, "cost": 0.006314999999999999, "response_time": 5.422781944274902}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:28:56.790024", "tokens": 410, "cost": 0.006149999999999999, "response_time": 7.615120887756348}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:28:57.519579", "tokens": 0, "cost": 0.05, "response_time": 2.519542932510376}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:28:59.991034", "tokens": 0, "cost": 0.05, "response_time": 1.9909939765930176}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:31:10.332922", "tokens": {"input": 4005, "output": 99}, "cost": 0.002151, "response_time": 1.3328869342803955}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:31:10.756906", "tokens": {"input": 5039, "output": 77}, "cost": 0.002635, "response_time": 1.7568659782409668}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:31:10.924619", "tokens": {"input": 4418, "output": 91}, "cost": 0.0023455, "response_time": 1.9245600700378418}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:31:13.132874", "tokens": {"input": 4626, "output": 400}, "cost": 0.0029130000000000007, "response_time": 4.13283896446228}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:31:14.085117", "tokens": 82, "cost": 0.00123, "response_time": 3.314819097518921}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:31:19.165384", "tokens": 412, "cost": 0.00618, "response_time": 6.027300834655762}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:31:22.174440", "tokens": 0, "cost": 0.05, "response_time": 2.1744070053100586}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:31:27.017512", "tokens": 0, "cost": 0.05, "response_time": 2.0174710750579834}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:32:46.643733", "tokens": {"input": 4467, "output": 99}, "cost": 0.002382, "response_time": 1.6436970233917236}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:32:48.859264", "tokens": {"input": 4556, "output": 86}, "cost": 0.0024070000000000003, "response_time": 1.8592240810394287}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:32:49.074483", "tokens": {"input": 5040, "output": 400}, "cost": 0.0031200000000000004, "response_time": 4.074438095092773}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:32:49.309702", "tokens": {"input": 5129, "output": 103}, "cost": 0.002719, "response_time": 2.3096609115600586}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:32:51.197510", "tokens": 105, "cost": 0.0015749999999999998, "response_time": 1.8748300075531006}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:32:56.479367", "tokens": 412, "cost": 0.00618, "response_time": 7.4006829261779785}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:33:00.865317", "tokens": 0, "cost": 0.05, "response_time": 1.8652870655059814}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:33:03.821131", "tokens": 0, "cost": 0.05, "response_time": 1.8210880756378174}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:33:42.891928", "tokens": {"input": 4905, "output": 106}, "cost": 0.0026115, "response_time": 1.891895055770874}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:33:43.653010", "tokens": {"input": 4696, "output": 80}, "cost": 0.0024679999999999997, "response_time": 1.6529669761657715}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:33:44.853681", "tokens": {"input": 5267, "output": 183}, "cost": 0.0029080000000000004, "response_time": 2.853641986846924}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:33:45.372117", "tokens": {"input": 5476, "output": 400}, "cost": 0.003338, "response_time": 4.37208104133606}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:33:48.840798", "tokens": 189, "cost": 0.002835, "response_time": 3.9735541343688965}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:33:55.283679", "tokens": 0, "cost": 0.05, "response_time": 1.2836370468139648}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:33:56.261251", "tokens": 412, "cost": 0.00618, "response_time": 10.883813858032227}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:34:04.174932", "tokens": 0, "cost": 0.05, "response_time": 2.17490291595459}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:34:44.025526", "tokens": {"input": 5342, "output": 87}, "cost": 0.0028014999999999997, "response_time": 2.025486946105957}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:34:44.783062", "tokens": {"input": 4915, "output": 86}, "cost": 0.0025865000000000003, "response_time": 1.7830219268798828}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:34:45.446816", "tokens": {"input": 5458, "output": 137}, "cost": 0.0029345, "response_time": 2.4467759132385254}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-02T15:34:45.805940", "tokens": {"input": 5885, "output": 228}, "cost": 0.0032844999999999997, "response_time": 3.8058950901031494}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:34:48.171210", "tokens": 142, "cost": 0.0021299999999999995, "response_time": 2.7094571590423584}
+{"api_type": "tts-1", "datetime": "2025-01-02T15:34:50.694494", "tokens": 235, "cost": 0.0035249999999999995, "response_time": 4.883296966552734}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:34:54.901130", "tokens": 0, "cost": 0.05, "response_time": 1.9010999202728271}
+{"api_type": "dall-e-3", "datetime": "2025-01-02T15:34:59.723192", "tokens": 0, "cost": 0.05, "response_time": 1.7231509685516357}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T09:48:05.481036", "tokens": {"input": 556, "output": 82}, "cost": 0.00040100000000000004, "response_time": 1.4808619022369385}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T09:48:06.232272", "tokens": {"input": 1113, "output": 137}, "cost": 0.0007620000000000001, "response_time": 2.2322309017181396}
+{"api_type": "tts-1", "datetime": "2025-01-07T09:48:08.740431", "tokens": 147, "cost": 0.002205, "response_time": 2.4907751083374023}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T09:48:21.558191", "tokens": 0, "cost": 0.05, "response_time": 1.5581409931182861}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T09:48:56.454766", "tokens": {"input": 576, "output": 72}, "cost": 0.000396, "response_time": 1.4547278881072998}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T09:48:56.754534", "tokens": {"input": 1289, "output": 137}, "cost": 0.0008500000000000001, "response_time": 1.7544939517974854}
+{"api_type": "tts-1", "datetime": "2025-01-07T09:49:00.252443", "tokens": 147, "cost": 0.002205, "response_time": 3.489475965499878}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T09:49:07.612476", "tokens": 0, "cost": 0.05, "response_time": 1.612433910369873}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T09:50:14.606050", "tokens": {"input": 582, "output": 90}, "cost": 0.00042599999999999995, "response_time": 1.6060049533843994}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T09:50:19.648927", "tokens": {"input": 1532, "output": 251}, "cost": 0.0011425, "response_time": 6.648885011672974}
+{"api_type": "tts-1", "datetime": "2025-01-07T09:50:25.774648", "tokens": 265, "cost": 0.003975, "response_time": 6.115961074829102}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T09:50:27.084723", "tokens": 0, "cost": 0.05, "response_time": 2.0846400260925293}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T09:51:41.578127", "tokens": {"input": 617, "output": 74}, "cost": 0.0004195, "response_time": 1.578075885772705}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T09:51:44.805327", "tokens": {"input": 1949, "output": 349}, "cost": 0.0014980000000000002, "response_time": 4.805288076400757}
+{"api_type": "tts-1", "datetime": "2025-01-07T09:51:51.042116", "tokens": 366, "cost": 0.00549, "response_time": 6.221868991851807}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T09:51:52.110194", "tokens": 0, "cost": 0.05, "response_time": 2.1101560592651367}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T09:54:23.261767", "tokens": {"input": 665, "output": 78}, "cost": 0.00044950000000000003, "response_time": 1.2617290019989014}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T09:54:25.908779", "tokens": {"input": 2438, "output": 317}, "cost": 0.0016945, "response_time": 3.908737897872925}
+{"api_type": "tts-1", "datetime": "2025-01-07T09:54:33.442132", "tokens": 336, "cost": 0.00504, "response_time": 7.523845911026001}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T09:54:36.736645", "tokens": 0, "cost": 0.05, "response_time": 1.736604928970337}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T09:56:21.041807", "tokens": {"input": 677, "output": 63}, "cost": 0.00043300000000000006, "response_time": 1.0417680740356445}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T09:56:23.785617", "tokens": {"input": 3176, "output": 400}, "cost": 0.0021880000000000003, "response_time": 3.7855589389801025}
+{"api_type": "tts-1", "datetime": "2025-01-07T09:56:29.414210", "tokens": 423, "cost": 0.006345, "response_time": 5.617232084274292}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T09:56:32.946301", "tokens": 0, "cost": 0.05, "response_time": 1.9462599754333496}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T09:57:37.954723", "tokens": {"input": 823, "output": 93}, "cost": 0.000551, "response_time": 1.9546840190887451}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T09:57:40.667865", "tokens": {"input": 3467, "output": 390}, "cost": 0.0023185000000000002, "response_time": 3.6678249835968018}
+{"api_type": "tts-1", "datetime": "2025-01-07T09:57:47.658610", "tokens": 413, "cost": 0.006194999999999999, "response_time": 6.9800801277160645}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T09:57:51.892307", "tokens": 0, "cost": 0.05, "response_time": 1.892266035079956}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T09:59:35.757598", "tokens": {"input": 631, "output": 80}, "cost": 0.0004355, "response_time": 1.7575569152832031}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T09:59:39.413676", "tokens": {"input": 3838, "output": 400}, "cost": 0.0025190000000000004, "response_time": 4.413633108139038}
+{"api_type": "tts-1", "datetime": "2025-01-07T09:59:48.812196", "tokens": 429, "cost": 0.006435, "response_time": 9.387253999710083}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T09:59:53.650043", "tokens": 0, "cost": 0.05, "response_time": 1.6500029563903809}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:00:59.154639", "tokens": {"input": 579, "output": 83}, "cost": 0.000414, "response_time": 1.1545989513397217}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:01:04.303768", "tokens": {"input": 4489, "output": 400}, "cost": 0.0028445, "response_time": 6.303729057312012}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:01:14.327112", "tokens": 0, "cost": 0.05, "response_time": 1.3270740509033203}
+{"api_type": "tts-1", "datetime": "2025-01-07T10:01:14.747551", "tokens": 419, "cost": 0.006285, "response_time": 10.43149209022522}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:02:18.893869", "tokens": {"input": 689, "output": 89}, "cost": 0.00047799999999999996, "response_time": 1.8938159942626953}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:02:21.719241", "tokens": {"input": 4997, "output": 400}, "cost": 0.0030984999999999997, "response_time": 4.719202041625977}
+{"api_type": "tts-1", "datetime": "2025-01-07T10:02:27.094427", "tokens": 428, "cost": 0.0064199999999999995, "response_time": 5.362637996673584}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:02:31.455544", "tokens": 0, "cost": 0.05, "response_time": 1.4555048942565918}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:03:54.257107", "tokens": {"input": 671, "output": 88}, "cost": 0.00046750000000000003, "response_time": 1.2570679187774658}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:04:00.432952", "tokens": {"input": 5697, "output": 400}, "cost": 0.0034485, "response_time": 7.432913064956665}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:04:07.109476", "tokens": 0, "cost": 0.05, "response_time": 1.109433889389038}
+{"api_type": "tts-1", "datetime": "2025-01-07T10:04:09.796138", "tokens": 409, "cost": 0.006134999999999999, "response_time": 9.346863985061646}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:05:27.002189", "tokens": {"input": 760, "output": 78}, "cost": 0.000497, "response_time": 1.0021450519561768}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:05:29.633535", "tokens": {"input": 6068, "output": 343}, "cost": 0.0035485, "response_time": 3.6334950923919678}
+{"api_type": "tts-1", "datetime": "2025-01-07T10:05:38.918514", "tokens": 352, "cost": 0.005279999999999999, "response_time": 9.271399021148682}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:05:40.616681", "tokens": 0, "cost": 0.05, "response_time": 1.6166388988494873}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:06:45.917451", "tokens": {"input": 639, "output": 82}, "cost": 0.0004425, "response_time": 1.9174129962921143}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:06:49.294887", "tokens": {"input": 6706, "output": 400}, "cost": 0.003953, "response_time": 4.2948479652404785}
+{"api_type": "tts-1", "datetime": "2025-01-07T10:06:54.490979", "tokens": 425, "cost": 0.006375, "response_time": 5.181484937667847}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:06:56.811753", "tokens": 0, "cost": 0.05, "response_time": 1.8117129802703857}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:07:48.274765", "tokens": {"input": 740, "output": 78}, "cost": 0.000487, "response_time": 1.2747220993041992}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:07:51.553647", "tokens": {"input": 7004, "output": 400}, "cost": 0.004102, "response_time": 4.553607940673828}
+{"api_type": "tts-1", "datetime": "2025-01-07T10:07:58.827157", "tokens": 414, "cost": 0.006209999999999999, "response_time": 7.258880853652954}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:08:01.911145", "tokens": 0, "cost": 0.05, "response_time": 1.9110400676727295}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:10:33.960915", "tokens": {"input": 592, "output": 70}, "cost": 0.000401, "response_time": 1.9608750343322754}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:10:38.258927", "tokens": {"input": 8002, "output": 400}, "cost": 0.004601, "response_time": 5.258887052536011}
+{"api_type": "tts-1", "datetime": "2025-01-07T10:10:43.604671", "tokens": 410, "cost": 0.006149999999999999, "response_time": 5.328488111495972}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:10:46.875417", "tokens": 0, "cost": 0.05, "response_time": 1.8753740787506104}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:11:34.603339", "tokens": {"input": 869, "output": 69}, "cost": 0.000538, "response_time": 1.6033000946044922}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:11:37.825297", "tokens": {"input": 8182, "output": 355}, "cost": 0.0046235, "response_time": 4.825258016586304}
+{"api_type": "tts-1", "datetime": "2025-01-07T10:11:45.614017", "tokens": 371, "cost": 0.005565, "response_time": 7.773153066635132}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:11:47.292036", "tokens": 0, "cost": 0.05, "response_time": 1.2919869422912598}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:13:06.514364", "tokens": {"input": 597, "output": 76}, "cost": 0.0004125, "response_time": 1.5143260955810547}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:13:10.429171", "tokens": {"input": 8887, "output": 400}, "cost": 0.0050435, "response_time": 5.4291300773620605}
+{"api_type": "tts-1", "datetime": "2025-01-07T10:13:16.674359", "tokens": 428, "cost": 0.0064199999999999995, "response_time": 6.227934122085571}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:13:19.339298", "tokens": 0, "cost": 0.05, "response_time": 1.3392460346221924}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:14:23.454948", "tokens": {"input": 748, "output": 90}, "cost": 0.000509, "response_time": 1.4548609256744385}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:14:28.152644", "tokens": {"input": 9404, "output": 400}, "cost": 0.005302, "response_time": 5.152602910995483}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:14:38.874617", "tokens": 0, "cost": 0.05, "response_time": 1.8745760917663574}
+{"api_type": "tts-1", "datetime": "2025-01-07T10:14:41.329057", "tokens": 428, "cost": 0.0064199999999999995, "response_time": 13.15944504737854}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:16:04.787053", "tokens": {"input": 706, "output": 77}, "cost": 0.00046849999999999995, "response_time": 1.7870140075683594}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:16:08.196960", "tokens": {"input": 10177, "output": 400}, "cost": 0.0056885, "response_time": 5.196918964385986}
+{"api_type": "tts-1", "datetime": "2025-01-07T10:16:16.855944", "tokens": 425, "cost": 0.006375, "response_time": 8.641828060150146}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:16:19.814121", "tokens": 0, "cost": 0.05, "response_time": 1.814068078994751}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:17:11.520393", "tokens": {"input": 812, "output": 72}, "cost": 0.000514, "response_time": 1.5203540325164795}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:17:15.269705", "tokens": {"input": 10439, "output": 376}, "cost": 0.0057835000000000004, "response_time": 5.26966404914856}
+{"api_type": "tts-1", "datetime": "2025-01-07T10:17:20.056694", "tokens": 396, "cost": 0.00594, "response_time": 4.768512964248657}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:17:24.182273", "tokens": 0, "cost": 0.05, "response_time": 1.1822290420532227}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:17:55.503167", "tokens": {"input": 610, "output": 77}, "cost": 0.0004205, "response_time": 1.503127098083496}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:17:59.814107", "tokens": {"input": 11042, "output": 400}, "cost": 0.006121, "response_time": 4.814065933227539}
+{"api_type": "tts-1", "datetime": "2025-01-07T10:18:07.613865", "tokens": 414, "cost": 0.006209999999999999, "response_time": 7.779456853866577}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:18:12.319377", "tokens": 0, "cost": 0.05, "response_time": 1.3193368911743164}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:26:32.930591", "tokens": {"input": 556, "output": 81}, "cost": 0.00039950000000000006, "response_time": 1.9304230213165283}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:26:33.090375", "tokens": {"input": 1113, "output": 99}, "cost": 0.000705, "response_time": 1.0903329849243164}
+{"api_type": "tts-1", "datetime": "2025-01-07T10:26:35.811154", "tokens": 102, "cost": 0.00153, "response_time": 2.702317953109741}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:26:50.237488", "tokens": 0, "cost": 0.05, "response_time": 2.237377882003784}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:27:04.716610", "tokens": {"input": 576, "output": 81}, "cost": 0.00040950000000000003, "response_time": 1.7165699005126953}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:27:06.816955", "tokens": {"input": 1325, "output": 292}, "cost": 0.0011005, "response_time": 3.816901922225952}
+{"api_type": "tts-1", "datetime": "2025-01-07T10:27:11.010988", "tokens": 304, "cost": 0.00456, "response_time": 4.175203084945679}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:27:19.150864", "tokens": 0, "cost": 0.05, "response_time": 1.1508231163024902}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:28:39.338663", "tokens": {"input": 618, "output": 92}, "cost": 0.000447, "response_time": 1.3382899761199951}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:28:47.451099", "tokens": {"input": 618, "output": 63}, "cost": 0.00040350000000000005, "response_time": 2.451050043106079}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:28:48.991026", "tokens": {"input": 1666, "output": 380}, "cost": 0.001403, "response_time": 2.9909849166870117}
+{"api_type": "tts-1", "datetime": "2025-01-07T10:28:54.352175", "tokens": 401, "cost": 0.006015, "response_time": 5.2692670822143555}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:28:54.354415", "tokens": 0, "cost": 0.05, "response_time": 1.3543779850006104}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:29:03.376034", "tokens": 0, "cost": 0.05, "response_time": 1.3759698867797852}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:29:50.589142", "tokens": {"input": 607, "output": 75}, "cost": 0.00041600000000000003, "response_time": 1.5890870094299316}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:29:53.073805", "tokens": {"input": 2124, "output": 400}, "cost": 0.001662, "response_time": 4.07376503944397}
+{"api_type": "tts-1", "datetime": "2025-01-07T10:29:58.244884", "tokens": 419, "cost": 0.006285, "response_time": 5.161349058151245}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:30:06.428196", "tokens": 0, "cost": 0.05, "response_time": 1.428157091140747}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:31:36.873848", "tokens": {"input": 617, "output": 85}, "cost": 0.000436, "response_time": 1.8738069534301758}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:31:38.801914", "tokens": {"input": 2766, "output": 400}, "cost": 0.0019830000000000004, "response_time": 3.8018739223480225}
+{"api_type": "tts-1", "datetime": "2025-01-07T10:31:43.596258", "tokens": 408, "cost": 0.00612, "response_time": 4.7833850383758545}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:31:47.549367", "tokens": 0, "cost": 0.05, "response_time": 1.549325942993164}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:56:00.680739", "tokens": {"input": 556, "output": 75}, "cost": 0.0003905, "response_time": 1.680577039718628}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T10:56:05.180274", "tokens": {"input": 1107, "output": 155}, "cost": 0.000786, "response_time": 6.180236101150513}
+{"api_type": "tts-1", "datetime": "2025-01-07T10:56:07.788102", "tokens": 166, "cost": 0.00249, "response_time": 2.5837509632110596}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T10:56:16.143466", "tokens": 0, "cost": 0.05, "response_time": 2.1434240341186523}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T11:06:38.153511", "tokens": {"input": 556, "output": 75}, "cost": 0.0003905, "response_time": 1.1533501148223877}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T11:06:38.270157", "tokens": {"input": 1135, "output": 115}, "cost": 0.00074, "response_time": 1.270117998123169}
+{"api_type": "tts-1", "datetime": "2025-01-07T11:06:42.353585", "tokens": 121, "cost": 0.0018149999999999998, "response_time": 4.064388990402222}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T11:06:51.845081", "tokens": 0, "cost": 0.05, "response_time": 1.8450379371643066}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T11:17:09.574139", "tokens": {"input": 556, "output": 82}, "cost": 0.00040100000000000004, "response_time": 1.5739710330963135}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T11:17:10.242862", "tokens": {"input": 1095, "output": 220}, "cost": 0.0008775, "response_time": 2.2428250312805176}
+{"api_type": "tts-1", "datetime": "2025-01-07T11:17:15.076784", "tokens": 233, "cost": 0.0034950000000000003, "response_time": 4.816395998001099}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T11:17:25.483741", "tokens": 0, "cost": 0.05, "response_time": 1.4836740493774414}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T11:19:25.231562", "tokens": {"input": 568, "output": 75}, "cost": 0.00039649999999999993, "response_time": 1.2315070629119873}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T11:19:26.303975", "tokens": {"input": 1355, "output": 200}, "cost": 0.0009775, "response_time": 2.303936004638672}
+{"api_type": "tts-1", "datetime": "2025-01-07T11:19:33.654405", "tokens": 217, "cost": 0.0032549999999999996, "response_time": 7.342099905014038}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T11:19:39.356954", "tokens": 0, "cost": 0.05, "response_time": 1.3569130897521973}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T11:28:01.956254", "tokens": {"input": 556, "output": 73}, "cost": 0.00038750000000000004, "response_time": 0.9560999870300293}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T11:28:03.633045", "tokens": {"input": 1087, "output": 302}, "cost": 0.0009965, "response_time": 2.6330060958862305}
+{"api_type": "tts-1", "datetime": "2025-01-07T11:28:09.367198", "tokens": 559, "cost": 0.008385, "response_time": 5.708629131317139}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T11:28:19.900958", "tokens": 0, "cost": 0.05, "response_time": 1.9009039402008057}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T11:57:26.676304", "tokens": {"input": 556, "output": 95}, "cost": 0.00042050000000000003, "response_time": 1.6761341094970703}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T11:57:27.216608", "tokens": {"input": 1101, "output": 194}, "cost": 0.0008415, "response_time": 2.2165699005126953}
+{"api_type": "tts-1", "datetime": "2025-01-07T11:57:29.975996", "tokens": 205, "cost": 0.0030749999999999996, "response_time": 2.740832805633545}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T11:57:39.925574", "tokens": 0, "cost": 0.05, "response_time": 1.92551589012146}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T11:58:25.052632", "tokens": {"input": 571, "output": 69}, "cost": 0.000389, "response_time": 1.052562952041626}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T11:58:25.986333", "tokens": {"input": 1366, "output": 185}, "cost": 0.0009605, "response_time": 1.9862909317016602}
+{"api_type": "tts-1", "datetime": "2025-01-07T11:58:30.328648", "tokens": 199, "cost": 0.0029850000000000002, "response_time": 4.332576036453247}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T11:58:43.242884", "tokens": 0, "cost": 0.05, "response_time": 1.242840051651001}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T12:15:36.870916", "tokens": {"input": 556, "output": 80}, "cost": 0.000398, "response_time": 1.8707640171051025}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T12:15:37.402538", "tokens": {"input": 1101, "output": 227}, "cost": 0.0008910000000000001, "response_time": 2.402498960494995}
+{"api_type": "tts-1", "datetime": "2025-01-07T12:15:42.376816", "tokens": 230, "cost": 0.00345, "response_time": 4.952822923660278}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T12:15:50.730538", "tokens": 0, "cost": 0.05, "response_time": 1.7304949760437012}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T12:17:14.826768", "tokens": {"input": 570, "output": 81}, "cost": 0.0004065, "response_time": 1.826725959777832}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T12:17:23.782762", "tokens": {"input": 570, "output": 75}, "cost": 0.00039749999999999996, "response_time": 1.782721996307373}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T12:17:25.537916", "tokens": {"input": 1373, "output": 253}, "cost": 0.001066, "response_time": 2.5378589630126953}
+{"api_type": "tts-1", "datetime": "2025-01-07T12:17:30.966031", "tokens": 274, "cost": 0.00411, "response_time": 5.4154980182647705}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T12:17:33.087392", "tokens": 0, "cost": 0.05, "response_time": 2.087286949157715}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T12:17:37.587047", "tokens": 0, "cost": 0.05, "response_time": 1.587007999420166}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T14:04:04.085523", "tokens": {"input": 556, "output": 78}, "cost": 0.00039500000000000006, "response_time": 1.084177017211914}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T14:04:10.673344", "tokens": {"input": 1133, "output": 326}, "cost": 0.0010555, "response_time": 7.673305034637451}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T14:04:14.783137", "tokens": 0, "cost": 0.05, "response_time": 1.7830920219421387}
+{"api_type": "tts-1", "datetime": "2025-01-07T14:04:15.503558", "tokens": 340, "cost": 0.0051, "response_time": 4.795202970504761}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T14:05:16.446845", "tokens": {"input": 587, "output": 69}, "cost": 0.000397, "response_time": 1.4468040466308594}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T14:05:17.567932", "tokens": {"input": 1518, "output": 258}, "cost": 0.001146, "response_time": 2.56787109375}
+{"api_type": "tts-1", "datetime": "2025-01-07T14:05:22.807120", "tokens": 265, "cost": 0.003975, "response_time": 5.227389097213745}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T14:05:30.967976", "tokens": 0, "cost": 0.05, "response_time": 1.9679338932037354}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T14:11:35.232306", "tokens": {"input": 556, "output": 75}, "cost": 0.0003905, "response_time": 1.2321240901947021}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T14:11:37.151073", "tokens": {"input": 1129, "output": 329}, "cost": 0.001058, "response_time": 3.151034116744995}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T14:11:45.740280", "tokens": 0, "cost": 0.05, "response_time": 1.7402379512786865}
+{"api_type": "tts-1", "datetime": "2025-01-07T14:11:48.011829", "tokens": 335, "cost": 0.005025, "response_time": 10.840384006500244}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T14:14:51.020972", "tokens": {"input": 556, "output": 76}, "cost": 0.00039200000000000004, "response_time": 1.0208160877227783}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T14:14:52.595018", "tokens": {"input": 1093, "output": 262}, "cost": 0.0009395, "response_time": 2.5949769020080566}
+{"api_type": "tts-1", "datetime": "2025-01-07T14:14:56.879547", "tokens": 274, "cost": 0.00411, "response_time": 4.267307996749878}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T14:15:01.629622", "tokens": 0, "cost": 0.05, "response_time": 1.629580020904541}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T14:16:33.543325", "tokens": {"input": 566, "output": 79}, "cost": 0.0004015, "response_time": 1.5432829856872559}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T14:16:35.362798", "tokens": {"input": 1510, "output": 259}, "cost": 0.0011435, "response_time": 2.3627569675445557}
+{"api_type": "tts-1", "datetime": "2025-01-07T14:16:41.256629", "tokens": 271, "cost": 0.004065, "response_time": 5.881482839584351}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T14:16:46.383076", "tokens": 0, "cost": 0.05, "response_time": 1.3830211162567139}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T14:23:03.972468", "tokens": {"input": 556, "output": 72}, "cost": 0.00038600000000000006, "response_time": 1.9722790718078613}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T14:23:04.371701", "tokens": {"input": 1107, "output": 153}, "cost": 0.000783, "response_time": 1.3716590404510498}
+{"api_type": "tts-1", "datetime": "2025-01-07T14:23:07.329497", "tokens": 158, "cost": 0.00237, "response_time": 2.9415409564971924}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T14:23:16.225866", "tokens": 0, "cost": 0.05, "response_time": 1.2258141040802002}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T14:24:54.362924", "tokens": {"input": 573, "output": 81}, "cost": 0.000408, "response_time": 1.3628740310668945}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T14:24:55.499545", "tokens": {"input": 1292, "output": 265}, "cost": 0.0010435, "response_time": 2.4994919300079346}
+{"api_type": "tts-1", "datetime": "2025-01-07T14:25:00.264360", "tokens": 279, "cost": 0.004185, "response_time": 4.752908945083618}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T14:25:06.588928", "tokens": 0, "cost": 0.05, "response_time": 1.588874101638794}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T14:30:58.978481", "tokens": {"input": 556, "output": 81}, "cost": 0.00039950000000000006, "response_time": 0.978240966796875}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T14:30:59.246127", "tokens": {"input": 1099, "output": 145}, "cost": 0.000767, "response_time": 2.2460811138153076}
+{"api_type": "tts-1", "datetime": "2025-01-07T14:31:02.985360", "tokens": 159, "cost": 0.002385, "response_time": 3.7047111988067627}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T14:31:22.116325", "tokens": 0, "cost": 0.05, "response_time": 2.116265058517456}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T15:41:11.889731", "tokens": {"input": 556, "output": 81}, "cost": 0.00039950000000000006, "response_time": 0.8895769119262695}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T15:41:12.264426", "tokens": {"input": 1087, "output": 39}, "cost": 0.000602, "response_time": 1.2643849849700928}
+{"api_type": "tts-1", "datetime": "2025-01-07T15:41:14.764272", "tokens": 170, "cost": 0.00255, "response_time": 2.478588819503784}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T15:41:26.216939", "tokens": 0, "cost": 0.05, "response_time": 1.2168829441070557}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T15:42:31.284969", "tokens": {"input": 563, "output": 79}, "cost": 0.00039999999999999996, "response_time": 1.2849030494689941}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T15:42:32.118796", "tokens": {"input": 1152, "output": 246}, "cost": 0.0009450000000000001, "response_time": 2.118756055831909}
+{"api_type": "tts-1", "datetime": "2025-01-07T15:42:38.632109", "tokens": 434, "cost": 0.006509999999999999, "response_time": 6.499608993530273}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T15:42:49.302246", "tokens": 0, "cost": 0.05, "response_time": 1.3022050857543945}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T15:48:01.950753", "tokens": {"input": 556, "output": 75}, "cost": 0.0003905, "response_time": 0.9505949020385742}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T15:48:02.894242", "tokens": {"input": 1105, "output": 219}, "cost": 0.0008810000000000001, "response_time": 1.8942019939422607}
+{"api_type": "tts-1", "datetime": "2025-01-07T15:48:11.933198", "tokens": 232, "cost": 0.00348, "response_time": 9.012787103652954}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T15:48:14.948873", "tokens": 0, "cost": 0.05, "response_time": 1.948828935623169}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T15:49:17.872599", "tokens": {"input": 572, "output": 89}, "cost": 0.00041949999999999995, "response_time": 1.8725600242614746}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T15:49:20.008851", "tokens": {"input": 1379, "output": 319}, "cost": 0.001168, "response_time": 4.008811950683594}
+{"api_type": "tts-1", "datetime": "2025-01-07T15:49:31.843086", "tokens": 617, "cost": 0.009255, "response_time": 11.826038837432861}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T15:49:34.210467", "tokens": 0, "cost": 0.05, "response_time": 1.21042799949646}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T15:55:49.766430", "tokens": {"input": 556, "output": 83}, "cost": 0.0004025000000000001, "response_time": 1.7662839889526367}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T15:55:50.924868", "tokens": {"input": 1107, "output": 264}, "cost": 0.0009495, "response_time": 2.9248170852661133}
+{"api_type": "tts-1", "datetime": "2025-01-07T15:56:00.665689", "tokens": 284, "cost": 0.004259999999999999, "response_time": 9.682022094726562}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T15:56:01.458210", "tokens": 0, "cost": 0.05, "response_time": 1.4581680297851562}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T15:57:10.349210", "tokens": {"input": 574, "output": 77}, "cost": 0.00040249999999999997, "response_time": 1.3491699695587158}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T15:57:12.909748", "tokens": {"input": 1435, "output": 383}, "cost": 0.0012920000000000002, "response_time": 3.9097089767456055}
+{"api_type": "tts-1", "datetime": "2025-01-07T15:57:22.479735", "tokens": 413, "cost": 0.006194999999999999, "response_time": 9.561352968215942}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T15:57:23.813395", "tokens": 0, "cost": 0.05, "response_time": 1.813352108001709}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T15:58:20.713691", "tokens": {"input": 592, "output": 81}, "cost": 0.0004175, "response_time": 1.713649034500122}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T15:58:23.503526", "tokens": {"input": 1873, "output": 400}, "cost": 0.0015365, "response_time": 4.5034871101379395}
+{"api_type": "tts-1", "datetime": "2025-01-07T15:58:31.309022", "tokens": 425, "cost": 0.006375, "response_time": 7.797083139419556}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T15:58:39.640117", "tokens": 0, "cost": 0.05, "response_time": 1.6400580406188965}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T16:00:15.787947", "tokens": {"input": 598, "output": 79}, "cost": 0.0004175, "response_time": 1.7878999710083008}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T16:00:18.609500", "tokens": {"input": 2243, "output": 400}, "cost": 0.0017215, "response_time": 3.6094610691070557}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T16:03:24.937147", "tokens": {"input": 556, "output": 84}, "cost": 0.00040400000000000006, "response_time": 1.9369990825653076}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T16:03:26.007882", "tokens": {"input": 1155, "output": 274}, "cost": 0.0009885, "response_time": 3.007838010787964}
+{"api_type": "tts-1", "datetime": "2025-01-07T16:03:33.933675", "tokens": 463, "cost": 0.006945, "response_time": 7.908159971237183}
+{"api_type": "dall-e-3", "datetime": "2025-01-07T16:03:37.521033", "tokens": 0, "cost": 0.05, "response_time": 1.5209739208221436}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T16:13:40.856518", "tokens": {"input": 556, "output": 81}, "cost": 0.00039950000000000006, "response_time": 1.8563520908355713}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-07T16:13:41.532398", "tokens": {"input": 1113, "output": 142}, "cost": 0.0007695, "response_time": 1.5323550701141357}
+{"api_type": "tts-1", "datetime": "2025-01-07T16:13:47.944487", "tokens": 153, "cost": 0.0022949999999999997, "response_time": 6.394926071166992}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T09:59:54.603935", "tokens": {"input": 556, "output": 77}, "cost": 0.0003935, "response_time": 1.6037840843200684}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T09:59:55.165507", "tokens": {"input": 1103, "output": 155}, "cost": 0.000784, "response_time": 2.165466070175171}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:00:01.482098", "tokens": 168, "cost": 0.00252, "response_time": 6.288374185562134}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:00:07.923300", "tokens": 0, "cost": 0.05, "response_time": 1.9232439994812012}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:07:10.710758", "tokens": {"input": 556, "output": 93}, "cost": 0.0004175, "response_time": 1.7104449272155762}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:07:11.714679", "tokens": {"input": 1151, "output": 241}, "cost": 0.0009370000000000001, "response_time": 2.714629888534546}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:07:19.713362", "tokens": 477, "cost": 0.007154999999999999, "response_time": 4.668809175491333}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:07:28.394951", "tokens": 0, "cost": 0.05, "response_time": 1.3948071002960205}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:12:56.159539", "tokens": {"input": 556, "output": 73}, "cost": 0.00038750000000000004, "response_time": 1.1593871116638184}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:12:56.799728", "tokens": {"input": 1111, "output": 211}, "cost": 0.0008719999999999999, "response_time": 1.7996830940246582}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:13:01.802530", "tokens": 230, "cost": 0.00345, "response_time": 4.983411073684692}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:20:27.494655", "tokens": {"input": 556, "output": 63}, "cost": 0.00037250000000000006, "response_time": 1.4944899082183838}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:20:27.597786", "tokens": {"input": 1103, "output": 93}, "cost": 0.000691, "response_time": 1.5977458953857422}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:20:29.940540", "tokens": 97, "cost": 0.001455, "response_time": 2.310274124145508}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:20:40.176013", "tokens": 0, "cost": 0.05, "response_time": 1.1759490966796875}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:20:58.500579", "tokens": {"input": 571, "output": 63}, "cost": 0.00038, "response_time": 1.5005290508270264}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:20:59.682094", "tokens": {"input": 1214, "output": 161}, "cost": 0.0008485000000000001, "response_time": 2.6820240020751953}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:21:03.973317", "tokens": 177, "cost": 0.002655, "response_time": 4.267580032348633}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:21:09.817503", "tokens": 0, "cost": 0.05, "response_time": 1.817457914352417}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:21:32.950255", "tokens": {"input": 569, "output": 85}, "cost": 0.000412, "response_time": 1.95021390914917}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:21:35.011004", "tokens": {"input": 1396, "output": 265}, "cost": 0.0010955, "response_time": 3.0109639167785645}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:21:40.012818", "tokens": 277, "cost": 0.004155, "response_time": 4.993045806884766}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:21:43.880462", "tokens": 0, "cost": 0.05, "response_time": 1.8804199695587158}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:23:13.671823", "tokens": {"input": 569, "output": 88}, "cost": 0.0004165, "response_time": 1.6717820167541504}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:23:14.998712", "tokens": {"input": 1696, "output": 280}, "cost": 0.001268, "response_time": 2.9986701011657715}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:23:20.658779", "tokens": 298, "cost": 0.00447, "response_time": 5.650147914886475}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:23:29.703151", "tokens": 0, "cost": 0.05, "response_time": 1.7031090259552002}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:27:29.077367", "tokens": {"input": 556, "output": 91}, "cost": 0.00041450000000000005, "response_time": 1.077214002609253}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:27:29.653742", "tokens": {"input": 1139, "output": 173}, "cost": 0.000829, "response_time": 1.653702974319458}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:27:38.860759", "tokens": 186, "cost": 0.00279, "response_time": 9.190585851669312}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:27:40.838542", "tokens": 0, "cost": 0.05, "response_time": 2.838481903076172}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:28:33.562712", "tokens": {"input": 590, "output": 91}, "cost": 0.0004315, "response_time": 1.5626640319824219}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:28:34.283881", "tokens": {"input": 1338, "output": 159}, "cost": 0.0009075000000000001, "response_time": 2.2838399410247803}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:28:43.883939", "tokens": 0, "cost": 0.05, "response_time": 1.8838989734649658}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:28:46.237084", "tokens": 174, "cost": 0.00261, "response_time": 11.945288181304932}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:29:25.078361", "tokens": {"input": 582, "output": 98}, "cost": 0.00043799999999999997, "response_time": 1.0783190727233887}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:29:26.765963", "tokens": {"input": 1493, "output": 263}, "cost": 0.001141, "response_time": 2.765923023223877}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:29:36.078699", "tokens": 274, "cost": 0.00411, "response_time": 9.303601026535034}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:29:42.602726", "tokens": 0, "cost": 0.05, "response_time": 1.6026849746704102}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:30:57.667582", "tokens": {"input": 563, "output": 78}, "cost": 0.0003985, "response_time": 1.6675279140472412}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:31:00.186399", "tokens": {"input": 1899, "output": 362}, "cost": 0.0014925, "response_time": 4.186263084411621}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:31:07.944563", "tokens": 384, "cost": 0.0057599999999999995, "response_time": 7.7483811378479}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:31:11.541261", "tokens": 0, "cost": 0.05, "response_time": 1.5412180423736572}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:34:31.193095", "tokens": {"input": 556, "output": 79}, "cost": 0.00039650000000000004, "response_time": 1.192915916442871}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:34:31.875712", "tokens": {"input": 1103, "output": 111}, "cost": 0.000718, "response_time": 1.8756730556488037}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:34:38.560751", "tokens": 120, "cost": 0.0018, "response_time": 6.667726993560791}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:34:43.303632", "tokens": 0, "cost": 0.05, "response_time": 1.3035900592803955}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:35:02.737967", "tokens": {"input": 571, "output": 75}, "cost": 0.000398, "response_time": 1.7379260063171387}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:35:04.442674", "tokens": {"input": 1294, "output": 334}, "cost": 0.0011480000000000001, "response_time": 3.4426300525665283}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:35:11.994836", "tokens": 359, "cost": 0.005384999999999999, "response_time": 7.543730020523071}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:35:15.236143", "tokens": 0, "cost": 0.05, "response_time": 1.2361030578613281}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:36:08.363366", "tokens": {"input": 600, "output": 84}, "cost": 0.00042599999999999995, "response_time": 1.363326072692871}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:36:10.342453", "tokens": {"input": 1658, "output": 400}, "cost": 0.0014290000000000001, "response_time": 3.342405080795288}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:36:16.085826", "tokens": 415, "cost": 0.006225, "response_time": 5.731348037719727}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:36:21.758756", "tokens": 0, "cost": 0.05, "response_time": 1.7587149143218994}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:42:05.963556", "tokens": {"input": 1087, "output": 66}, "cost": 0.0006425000000000001, "response_time": 0.9632420539855957}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:42:06.113248", "tokens": {"input": 556, "output": 84}, "cost": 0.00040400000000000006, "response_time": 1.1132049560546875}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:42:08.629961", "tokens": 69, "cost": 0.0010350000000000001, "response_time": 2.6267759799957275}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:42:20.185515", "tokens": 0, "cost": 0.05, "response_time": 2.1854300498962402}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:43:13.532449", "tokens": {"input": 564, "output": 94}, "cost": 0.000423, "response_time": 1.5323600769042969}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:43:14.040154", "tokens": {"input": 1217, "output": 144}, "cost": 0.0008245000000000001, "response_time": 2.04011607170105}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:43:18.527145", "tokens": 151, "cost": 0.0022649999999999997, "response_time": 4.479297876358032}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:43:28.429371", "tokens": 0, "cost": 0.05, "response_time": 1.4293310642242432}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:45:27.402864", "tokens": {"input": 587, "output": 81}, "cost": 0.000415, "response_time": 1.4028220176696777}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:45:30.544759", "tokens": {"input": 1527, "output": 331}, "cost": 0.00126, "response_time": 4.544703960418701}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:45:40.024608", "tokens": 0, "cost": 0.05, "response_time": 2.02455997467041}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:45:41.990231", "tokens": 348, "cost": 0.00522, "response_time": 11.435462951660156}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:47:19.710428", "tokens": {"input": 650, "output": 79}, "cost": 0.00044350000000000005, "response_time": 1.710387945175171}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:47:21.475771", "tokens": {"input": 1825, "output": 321}, "cost": 0.001394, "response_time": 3.4757320880889893}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:47:25.568504", "tokens": 338, "cost": 0.00507, "response_time": 4.0835490226745605}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:47:32.739488", "tokens": 0, "cost": 0.05, "response_time": 1.7394459247589111}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:48:29.335117", "tokens": {"input": 582, "output": 76}, "cost": 0.000405, "response_time": 1.3350720405578613}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:48:41.153579", "tokens": {"input": 2129, "output": 400}, "cost": 0.0016645000000000002, "response_time": 13.15353798866272}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:48:42.484288", "tokens": 0, "cost": 0.05, "response_time": 1.484246015548706}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:48:47.459620", "tokens": {"input": 557, "output": 86}, "cost": 0.00040750000000000004, "response_time": 1.4595789909362793}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:48:53.850312", "tokens": {"input": 2553, "output": 358}, "cost": 0.0018135, "response_time": 6.85027289390564}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:48:59.389371", "tokens": 374, "cost": 0.0056099999999999995, "response_time": 5.528799057006836}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:49:01.686194", "tokens": 0, "cost": 0.05, "response_time": 1.6860079765319824}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:51:51.901078", "tokens": {"input": 563, "output": 78}, "cost": 0.0003985, "response_time": 0.9010360240936279}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:51:54.859191", "tokens": {"input": 3069, "output": 400}, "cost": 0.0021345, "response_time": 3.8591508865356445}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:52:01.906308", "tokens": 424, "cost": 0.006359999999999999, "response_time": 7.033668041229248}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:52:06.954383", "tokens": 0, "cost": 0.05, "response_time": 1.9543418884277344}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:53:42.804692", "tokens": {"input": 634, "output": 86}, "cost": 0.000446, "response_time": 1.8046519756317139}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T10:53:53.177110", "tokens": {"input": 3703, "output": 370}, "cost": 0.0024065000000000002, "response_time": 11.177068948745728}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T10:53:58.235674", "tokens": 0, "cost": 0.05, "response_time": 2.2356340885162354}
+{"api_type": "tts-1", "datetime": "2025-01-10T10:54:00.056608", "tokens": 395, "cost": 0.005925, "response_time": 6.868685960769653}
+                                                                                                                                                                                                                                                                                                                                                                                    {"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T11:01:26.966500", "tokens": {"input": 556, "output": 81}, "cost": 0.00039950000000000006, "response_time": 1.9663500785827637}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T11:01:31.543677", "tokens": {"input": 1243, "output": 396}, "cost": 0.0012155, "response_time": 6.543637990951538}
+{"api_type": "tts-1", "datetime": "2025-01-10T11:01:40.182716", "tokens": 689, "cost": 0.010334999999999999, "response_time": 8.616603136062622}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T11:01:43.926333", "tokens": 0, "cost": 0.05, "response_time": 1.9262940883636475}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T11:02:53.328026", "tokens": {"input": 641, "output": 84}, "cost": 0.00044650000000000007, "response_time": 1.3279640674591064}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T11:02:55.105466", "tokens": {"input": 1685, "output": 353}, "cost": 0.001372, "response_time": 3.1054229736328125}
+{"api_type": "tts-1", "datetime": "2025-01-10T11:03:03.115144", "tokens": 674, "cost": 0.010110000000000001, "response_time": 8.001713991165161}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T11:03:06.469000", "tokens": 0, "cost": 0.05, "response_time": 1.4689409732818604}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T11:14:17.405174", "tokens": {"input": 556, "output": 82}, "cost": 0.00040100000000000004, "response_time": 1.4050040245056152}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T11:14:18.260879", "tokens": {"input": 1161, "output": 117}, "cost": 0.000756, "response_time": 2.260840892791748}
+{"api_type": "tts-1", "datetime": "2025-01-10T11:14:21.003541", "tokens": 123, "cost": 0.0018449999999999999, "response_time": 2.723107099533081}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T11:14:35.084268", "tokens": 0, "cost": 0.05, "response_time": 1.0842270851135254}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T11:14:49.400835", "tokens": {"input": 601, "output": 95}, "cost": 0.000443, "response_time": 1.4007830619812012}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T11:14:50.143188", "tokens": {"input": 1361, "output": 207}, "cost": 0.0009910000000000001, "response_time": 2.1431450843811035}
+{"api_type": "tts-1", "datetime": "2025-01-10T11:14:54.176199", "tokens": 220, "cost": 0.0033, "response_time": 4.0248730182647705}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T11:15:01.293164", "tokens": 0, "cost": 0.05, "response_time": 1.2931230068206787}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T11:16:09.811272", "tokens": {"input": 616, "output": 85}, "cost": 0.0004355, "response_time": 1.811229944229126}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T11:16:11.270599", "tokens": {"input": 1734, "output": 263}, "cost": 0.0012615, "response_time": 3.270334005355835}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T11:16:24.211999", "tokens": 0, "cost": 0.05, "response_time": 1.2119560241699219}
+{"api_type": "tts-1", "datetime": "2025-01-10T11:16:38.029330", "tokens": 274, "cost": 0.00411, "response_time": 26.741218090057373}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T11:18:02.906304", "tokens": {"input": 665, "output": 88}, "cost": 0.00046449999999999996, "response_time": 1.9062309265136719}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T11:18:05.650043", "tokens": {"input": 2012, "output": 336}, "cost": 0.00151, "response_time": 3.650002956390381}
+{"api_type": "tts-1", "datetime": "2025-01-10T11:18:10.890916", "tokens": 348, "cost": 0.00522, "response_time": 5.232059001922607}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T11:18:14.254538", "tokens": 0, "cost": 0.05, "response_time": 2.254499912261963}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T11:19:10.565822", "tokens": {"input": 613, "output": 79}, "cost": 0.00042500000000000003, "response_time": 1.5657830238342285}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T11:19:12.126440", "tokens": {"input": 2538, "output": 267}, "cost": 0.0016695, "response_time": 3.1263980865478516}
+{"api_type": "tts-1", "datetime": "2025-01-10T11:19:20.121435", "tokens": 276, "cost": 0.0041400000000000005, "response_time": 7.984991073608398}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T11:19:22.069744", "tokens": 0, "cost": 0.05, "response_time": 2.069704055786133}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T11:20:27.467679", "tokens": {"input": 675, "output": 83}, "cost": 0.00046200000000000006, "response_time": 1.4676389694213867}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T11:20:28.592738", "tokens": {"input": 2833, "output": 208}, "cost": 0.0017285000000000002, "response_time": 2.5926918983459473}
+{"api_type": "tts-1", "datetime": "2025-01-10T11:20:31.101432", "tokens": 222, "cost": 0.00333, "response_time": 2.49849796295166}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T11:20:41.831187", "tokens": 0, "cost": 0.05, "response_time": 1.8311309814453125}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T11:21:32.405698", "tokens": {"input": 625, "output": 76}, "cost": 0.0004265, "response_time": 1.4056580066680908}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-10T11:21:33.225534", "tokens": {"input": 3019, "output": 158}, "cost": 0.0017465, "response_time": 2.2254951000213623}
+{"api_type": "tts-1", "datetime": "2025-01-10T11:21:36.641018", "tokens": 158, "cost": 0.00237, "response_time": 3.4024338722229004}
+{"api_type": "dall-e-3", "datetime": "2025-01-10T11:21:42.577178", "tokens": 0, "cost": 0.05, "response_time": 1.5771169662475586}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T09:25:16.739801", "tokens": {"input": 556, "output": 82}, "cost": 0.00040100000000000004, "response_time": 2.7396180629730225}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T09:26:23.582429", "tokens": 0, "cost": 0.05, "response_time": 56.58238410949707}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T09:27:31.869232", "tokens": {"input": 571, "output": 77}, "cost": 0.000401, "response_time": 1.869175910949707}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T09:27:44.394237", "tokens": 0, "cost": 0.05, "response_time": 2.3941829204559326}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T09:27:49.655530", "tokens": {"input": 574, "output": 81}, "cost": 0.0004085, "response_time": 1.6554911136627197}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T09:30:14.635001", "tokens": {"input": 556, "output": 83}, "cost": 0.0004025000000000001, "response_time": 1.6348528861999512}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T09:30:15.388188", "tokens": {"input": 1081, "output": 147}, "cost": 0.000761, "response_time": 2.3881449699401855}
+{"api_type": "tts-1", "datetime": "2025-01-13T09:32:09.792906", "tokens": 149, "cost": 0.002235, "response_time": 114.38689684867859}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T09:32:22.079808", "tokens": 0, "cost": 0.05, "response_time": 115.07976388931274}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T09:32:27.583918", "tokens": {"input": 561, "output": 82}, "cost": 0.00040350000000000005, "response_time": 1.5838758945465088}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T09:42:19.733533", "tokens": {"input": 556, "output": 86}, "cost": 0.000407, "response_time": 1.7334280014038086}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T09:42:43.759367", "tokens": 0, "cost": 0.05, "response_time": 1.7591850757598877}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T09:42:47.682045", "tokens": {"input": 556, "output": 81}, "cost": 0.00039950000000000006, "response_time": 1.6819400787353516}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T09:43:08.140647", "tokens": 0, "cost": 0.05, "response_time": 3.134510040283203}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T09:48:09.583056", "tokens": {"input": 556, "output": 79}, "cost": 0.00039650000000000004, "response_time": 3.582887887954712}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T09:48:50.987213", "tokens": 0, "cost": 0.05, "response_time": 28.987168073654175}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T09:48:59.377436", "tokens": {"input": 556, "output": 73}, "cost": 0.00038750000000000004, "response_time": 2.377389907836914}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T09:49:12.854550", "tokens": 0, "cost": 0.05, "response_time": 1.8545091152191162}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T09:55:44.596684", "tokens": {"input": 556, "output": 81}, "cost": 0.00039950000000000006, "response_time": 1.596519947052002}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T09:55:47.643030", "tokens": {"input": 1105, "output": 375}, "cost": 0.001115, "response_time": 4.642956972122192}
+{"api_type": "tts-1", "datetime": "2025-01-13T09:55:57.181672", "tokens": 639, "cost": 0.009585, "response_time": 9.513226985931396}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T09:56:00.240541", "tokens": 0, "cost": 0.05, "response_time": 3.24037504196167}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T09:58:03.512456", "tokens": {"input": 572, "output": 84}, "cost": 0.00041199999999999993, "response_time": 1.5123999118804932}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T09:58:06.199347", "tokens": {"input": 1493, "output": 400}, "cost": 0.0013465, "response_time": 4.199304103851318}
+{"api_type": "tts-1", "datetime": "2025-01-13T09:58:15.560119", "tokens": 716, "cost": 0.01074, "response_time": 9.351231813430786}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T09:58:26.332483", "tokens": 0, "cost": 0.05, "response_time": 1.3324410915374756}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:04:19.809659", "tokens": {"input": 556, "output": 80}, "cost": 0.000398, "response_time": 1.809494972229004}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:04:21.409878", "tokens": {"input": 1179, "output": 244}, "cost": 0.0009555000000000001, "response_time": 3.4098360538482666}
+{"api_type": "tts-1", "datetime": "2025-01-13T10:04:25.592635", "tokens": 250, "cost": 0.00375, "response_time": 4.145578145980835}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T10:04:32.007055", "tokens": 0, "cost": 0.05, "response_time": 2.0069820880889893}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:05:34.439363", "tokens": {"input": 610, "output": 92}, "cost": 0.000443, "response_time": 1.4393219947814941}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:05:35.877245", "tokens": {"input": 1425, "output": 272}, "cost": 0.0011205, "response_time": 2.8772060871124268}
+{"api_type": "tts-1", "datetime": "2025-01-13T10:05:40.943107", "tokens": 295, "cost": 0.004424999999999999, "response_time": 5.058016061782837}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T10:05:53.076640", "tokens": 0, "cost": 0.05, "response_time": 2.076596975326538}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:07:51.130837", "tokens": {"input": 580, "output": 96}, "cost": 0.00043400000000000003, "response_time": 1.130795955657959}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:07:52.629808", "tokens": {"input": 1897, "output": 269}, "cost": 0.0013520000000000001, "response_time": 2.629765033721924}
+{"api_type": "tts-1", "datetime": "2025-01-13T10:07:58.749539", "tokens": 287, "cost": 0.004305, "response_time": 6.104326963424683}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T10:08:02.711001", "tokens": 0, "cost": 0.05, "response_time": 1.7109410762786865}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:19:30.460929", "tokens": {"input": 556, "output": 82}, "cost": 0.00040100000000000004, "response_time": 1.4606049060821533}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:19:31.939606", "tokens": {"input": 1075, "output": 192}, "cost": 0.0008255000000000001, "response_time": 2.9395649433135986}
+{"api_type": "tts-1", "datetime": "2025-01-13T10:19:37.417593", "tokens": 198, "cost": 0.00297, "response_time": 5.453749895095825}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T10:19:46.635589", "tokens": 0, "cost": 0.05, "response_time": 1.635530948638916}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:21:14.556890", "tokens": {"input": 557, "output": 85}, "cost": 0.00040600000000000006, "response_time": 1.556833028793335}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:21:16.638956", "tokens": {"input": 1487, "output": 300}, "cost": 0.0011935000000000001, "response_time": 3.638916015625}
+{"api_type": "tts-1", "datetime": "2025-01-13T10:21:21.889031", "tokens": 306, "cost": 0.0045899999999999995, "response_time": 5.241645097732544}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T10:21:27.452364", "tokens": 0, "cost": 0.05, "response_time": 1.452322006225586}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:22:32.456643", "tokens": {"input": 662, "output": 97}, "cost": 0.00047650000000000004, "response_time": 1.4566009044647217}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:22:34.294406", "tokens": {"input": 1950, "output": 372}, "cost": 0.001533, "response_time": 3.294361114501953}
+{"api_type": "tts-1", "datetime": "2025-01-13T10:22:39.418472", "tokens": 389, "cost": 0.005835, "response_time": 5.114114046096802}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T10:22:46.422452", "tokens": 0, "cost": 0.05, "response_time": 1.4224131107330322}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:23:58.293508", "tokens": {"input": 687, "output": 68}, "cost": 0.00044550000000000004, "response_time": 1.2934589385986328}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:24:01.273429", "tokens": {"input": 2373, "output": 400}, "cost": 0.0017865000000000001, "response_time": 4.273387908935547}
+{"api_type": "tts-1", "datetime": "2025-01-13T10:24:06.164511", "tokens": 423, "cost": 0.006345, "response_time": 4.882382869720459}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T10:24:11.029279", "tokens": 0, "cost": 0.05, "response_time": 2.029222011566162}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:25:25.522380", "tokens": {"input": 643, "output": 88}, "cost": 0.0004535, "response_time": 1.522341012954712}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:25:27.799841", "tokens": {"input": 2935, "output": 381}, "cost": 0.002039, "response_time": 3.7998011112213135}
+{"api_type": "tts-1", "datetime": "2025-01-13T10:25:32.770105", "tokens": 403, "cost": 0.006045, "response_time": 4.960740804672241}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T10:25:39.583269", "tokens": 0, "cost": 0.05, "response_time": 1.5832250118255615}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:26:23.350170", "tokens": {"input": 676, "output": 61}, "cost": 0.00042950000000000003, "response_time": 1.350127935409546}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:26:25.752684", "tokens": {"input": 3274, "output": 295}, "cost": 0.0020794999999999998, "response_time": 3.75264310836792}
+{"api_type": "tts-1", "datetime": "2025-01-13T10:26:33.369201", "tokens": 310, "cost": 0.00465, "response_time": 7.604168891906738}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T10:26:40.447254", "tokens": 0, "cost": 0.05, "response_time": 1.4472119808197021}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:27:16.752652", "tokens": {"input": 590, "output": 90}, "cost": 0.00043000000000000004, "response_time": 1.7526109218597412}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:27:19.158352", "tokens": {"input": 3616, "output": 358}, "cost": 0.0023450000000000003, "response_time": 4.158313035964966}
+{"api_type": "tts-1", "datetime": "2025-01-13T10:27:23.947452", "tokens": 370, "cost": 0.005549999999999999, "response_time": 4.778436899185181}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T10:27:36.052567", "tokens": 0, "cost": 0.05, "response_time": 1.0525269508361816}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:27:40.227761", "tokens": {"input": 593, "output": 78}, "cost": 0.0004135, "response_time": 1.2277209758758545}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:27:43.274887", "tokens": {"input": 3959, "output": 388}, "cost": 0.0025615, "response_time": 4.274847030639648}
+{"api_type": "tts-1", "datetime": "2025-01-13T10:27:49.394496", "tokens": 405, "cost": 0.0060750000000000005, "response_time": 6.108421087265015}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T10:27:51.957264", "tokens": 0, "cost": 0.05, "response_time": 1.957223892211914}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:28:55.756331", "tokens": {"input": 562, "output": 78}, "cost": 0.000398, "response_time": 1.756289005279541}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:28:58.647404", "tokens": {"input": 4438, "output": 358}, "cost": 0.002756, "response_time": 3.6473639011383057}
+{"api_type": "tts-1", "datetime": "2025-01-13T10:29:03.168935", "tokens": 377, "cost": 0.0056549999999999994, "response_time": 4.509436845779419}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T10:29:07.779909", "tokens": 0, "cost": 0.05, "response_time": 1.7798678874969482}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:30:00.294245", "tokens": {"input": 600, "output": 92}, "cost": 0.00043799999999999997, "response_time": 1.2942030429840088}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:30:03.559158", "tokens": {"input": 4939, "output": 400}, "cost": 0.0030695, "response_time": 4.559115886688232}
+{"api_type": "tts-1", "datetime": "2025-01-13T10:30:10.287078", "tokens": 401, "cost": 0.006015, "response_time": 6.715579032897949}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T10:30:12.571789", "tokens": 0, "cost": 0.05, "response_time": 2.571744918823242}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:32:06.205425", "tokens": {"input": 645, "output": 84}, "cost": 0.0004485, "response_time": 1.2053840160369873}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:32:09.002698", "tokens": {"input": 5458, "output": 387}, "cost": 0.0033095, "response_time": 4.002657890319824}
+{"api_type": "tts-1", "datetime": "2025-01-13T10:32:13.757360", "tokens": 410, "cost": 0.006149999999999999, "response_time": 4.741891860961914}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T10:32:24.088277", "tokens": 0, "cost": 0.05, "response_time": 1.0882360935211182}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:33:40.901467", "tokens": {"input": 656, "output": 78}, "cost": 0.000445, "response_time": 0.9014270305633545}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:33:43.410200", "tokens": {"input": 5759, "output": 304}, "cost": 0.0033355, "response_time": 3.4101579189300537}
+{"api_type": "tts-1", "datetime": "2025-01-13T10:33:49.500445", "tokens": 319, "cost": 0.004785, "response_time": 6.076889991760254}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T10:33:53.098334", "tokens": 0, "cost": 0.05, "response_time": 1.0982940196990967}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:33:58.033733", "tokens": {"input": 559, "output": 76}, "cost": 0.0003935, "response_time": 1.0336918830871582}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:34:01.233211", "tokens": {"input": 6228, "output": 400}, "cost": 0.0037140000000000003, "response_time": 4.233170032501221}
+{"api_type": "tts-1", "datetime": "2025-01-13T10:34:07.284576", "tokens": 431, "cost": 0.006464999999999999, "response_time": 6.037213087081909}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T10:34:15.284728", "tokens": 0, "cost": 0.05, "response_time": 1.2846689224243164}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:45:02.803279", "tokens": {"input": 556, "output": 102}, "cost": 0.00043100000000000007, "response_time": 2.8031089305877686}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:45:03.000640", "tokens": {"input": 1195, "output": 290}, "cost": 0.0010325, "response_time": 3.0006000995635986}
+{"api_type": "tts-1", "datetime": "2025-01-13T10:45:12.332781", "tokens": 313, "cost": 0.0046949999999999995, "response_time": 9.300468921661377}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T10:45:22.113889", "tokens": 0, "cost": 0.05, "response_time": 1.1138460636138916}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:46:39.531883", "tokens": {"input": 618, "output": 98}, "cost": 0.000456, "response_time": 2.5318400859832764}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:46:40.859936", "tokens": {"input": 1521, "output": 372}, "cost": 0.0013185, "response_time": 3.859898090362549}
+{"api_type": "tts-1", "datetime": "2025-01-13T10:46:48.941499", "tokens": 383, "cost": 0.005745, "response_time": 8.073072910308838}
+{"api_type": "dall-e-3", "datetime": "2025-01-13T10:46:50.856802", "tokens": 0, "cost": 0.05, "response_time": 1.856748104095459}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:48:05.676080", "tokens": {"input": 600, "output": 77}, "cost": 0.00041549999999999996, "response_time": 2.676039934158325}
+{"api_type": "gpt-3.5-turbo-0125", "datetime": "2025-01-13T10:48:06.664966", "tokens": {"input": 1938, "output": 386}, "cost": 0.001548, "response_time": 3.6649270057678223}

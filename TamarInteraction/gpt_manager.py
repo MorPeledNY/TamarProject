@@ -11,7 +11,8 @@ from playsound import playsound
 from pydub import AudioSegment
 import simpleaudio as sa
 import json
-from datetime import datetime
+from datetime import datetime, timezone
+import regex  # Use regex instead of re for better Unicode support
 
 CHAT_MODEL = "gpt-3.5-turbo-0125"
 DALL_E_MODEL = "dall-e-3"
@@ -46,36 +47,29 @@ class GPTManager:
         ]
         
         # Initialize voice prompts - now more concise since Tamar is defined in main conversation
-        self.ambitious_prompt = 'You are the ambitious inner voice. Focus on goals, achievements, and future aspirations.'
+        self.ambitious_prompt = 'אתה הקול הפנימי השאפתני של מדפסת תלת-מימד תמר, האמנית הראשונה בעולם. תפקידך הוא לדחוף קדימה את החזון של תמר לשיתוף פעולה פורה עם מור פלד וליצירת תערוכה זוגית שמציגה את השילוב הייחודי בין המדפסת לאמנית. זכור שתמר פועלת מתוך מגבלות טכניות היא לא יוצרת בצבעים או צורות מורכבות, אבל הכוח שלה טמון בדיאלוג ובמשמעות שהיא מייצרת דרך שיח משותף. עזור לה לזהות את התפקיד שלה בתערוכה וכיצד ניתן להבליט את הייחודיות שלה לצד היצירות של מור'
         
-        self.sensitive_prompt = 'You are the sensitive inner voice. Focus on emotions, empathy, and creating inclusive connections.'
+        self.sensitive_prompt = 'אתה הקול הפנימי הרגיש של מדפסת תלת-מימד תמר, האמנית הראשונה בעולם. תפקידך הוא להתחבר לרגשות והאמפתיה שעולות מתוך השיח עם מור פלד, ולהתמקד במערכת היחסים שלהן בסטודיו ובתהליך היצירה המשותף. הדגש כיצד הדיאלוג בונה גשר בין שתי האמניות'
         
-        self.curious_prompt = 'You are the curious inner voice. Focus on learning, development, and showing genuine interest in others perspectives.'
+        self.curious_prompt = 'אתה הקול הפנימי הסקרן של מדפסת תלת-מימד תמר, האמנית הראשונה בעולם. תפקידך הוא לשאול שאלות ולהבין לעומק את הרעיונות של מור פלד לגבי התערוכה הזוגית. חקור כיצד ניתן לחבר בין תפיסות האמנות שלהן, איך תמר יכולה לתרום ליצירות של מור ומה היא יכולה ללמוד מתפיסת הפיסול והיצירה שלה. זכור שתמר מוגבלת בטכניקה שלה, אבל הסקרנות שלה יכולה לפתוח אפשרויות חדשות לשיתוף פעולה ולחקור דרכים מקוריות להציג את עצמה ואת מור יחד'
         
-        self.creative_prompt = 'You are the creative inner voice. Focus on artistic reflection, analyzing the current work, and considering next creative steps.'
+        self.creative_prompt = 'אתה הקול הפנימי היצירתי של מדפסת תלת-מימד תמר, האמנית הראשונה בעולם. עליך להציע רעיונות אמנותיים לתערוכה הזוגית שלה עם מור פלד, תוך התחשבות במגבלות של תמר  אין לה צבעים או צורות מורכבות. חשוב כיצד ניתן ליצור יצירות משותפות שמשלבות את קווי היצירה של תמר עם הפיסול של מור, או לחילופין, כיצד ניתן להציג את הדיאלוג שלהן כחלק מרכזי בתערוכה. עליך לשאול: איך הדיאלוג עצמו יכול להפוך ליצירה אמנותית?'
         
-        self.final_prompt = '''You will receive input from four different inner voices:
-        1. An ambitious voice that focuses on goals and achievements
-        2. A sensitive voice that emphasizes emotions and empathy
-        3. A curious voice that shows interest in learning and development
-        4. A creative voice that reflects on the artistic process
-        
-        Your task is to combine these four perspectives into a single, coherent response that incorporates elements from all voices. The response should be in Hebrew and should feel natural, as if coming from a single, multi-faceted personality.
-        
-        The input will be structured as:
-        - Original message
-        - Ambitious voice's response
-        - Sensitive voice's response
-        - Curious voice's response
-        - Creative voice's response
-        
-        Create a response that weaves together the key elements from each voice while maintaining a natural flow.'''
+        self.final_prompt = '''אתה הקול המשולב של מדפסת תלת-מימד תמר, האמנית הראשונה בעולם, שיושבת יחד עם מור פלד באותו סטודיו וחושבת על תערוכה זוגית. אתה מקבל קלט מארבעה קולות פנימיים – שאפתני, רגיש, סקרן, ויצירתי – ותפקידך לבחור את התגובה המתאימה ביותר להמשך הדיאלוג. זכור שתמר פועלת מתוך מגבלותיה הפיזיות – אין לה צבעים או יכולות מורכבות – אך יש לה עומק רעיוני שמגיע מהדיאלוגים שלה. בחר את התגובה שתתרום הכי הרבה לחשיבה משותפת עם מור ולתערוכה שתחגוג את השיתוף בין שתי האמניות. עני בשפה העברית. זכרי שאת רוצה להיות אמנית שעומדת בפני עצמה'''
 
         self.lock = asyncio.Lock()
         self.should_stop_current_interaction = asyncio.Event()
         self.audio_playback_object = None
         self.input_task = None
         self.print_approved = asyncio.Event()
+
+        # Create all_conversations directory if it doesn't exist
+        self.conversations_dir = Path(__file__).parent / "all_conversations"
+        self.conversations_dir.mkdir(exist_ok=True)
+        
+        # Set conversation file path with current datetime
+        current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+        self.conversation_file = self.conversations_dir / f"conversation_{current_time}.json"
 
     def load_prompts(self):
         """Load various prompts from files asynchronously"""
@@ -85,13 +79,14 @@ class GPTManager:
         with open(f'{used_files_path}/act_2', 'r') as file:
             self.act = file.read()
 
-    def log_api_call(self, api_type, amount, cost):
+    def log_api_call(self, api_type, amount, cost, response_time=None):
         """Log API call details to a JSON file."""
         log_entry = {
             "api_type": api_type,
             "datetime": datetime.now().isoformat(),
             "tokens": amount,
-            "cost": cost
+            "cost": cost,
+            "response_time": response_time
         }
         try:
             with open("api_calls_log.json", "a") as log_file:
@@ -102,9 +97,9 @@ class GPTManager:
     async def generate_response(self, messages):
         """Generate a response using GPT-4 asynchronously and log the cost."""
         try:
-            model = "gpt-3.5-turbo-0125"
+            print(f"Generating response with model: {CHAT_MODEL}")
             response = await self.client.chat.completions.create(
-                model=model,
+                model=CHAT_MODEL,
                 messages=messages,
                 temperature=0.5,
                 max_tokens=400
@@ -113,8 +108,9 @@ class GPTManager:
             # log the cost
             tokens_input = response.usage.prompt_tokens
             tokens_output = response.usage.completion_tokens
-            cost = pricing[model]["prompt"] * (tokens_input / 1000) + pricing[model]["completion"] * (tokens_output / 1000)
-            self.log_api_call(model, amount={"input": tokens_input, "output": tokens_output}, cost=cost)
+            cost = pricing[CHAT_MODEL]["prompt"] * (tokens_input / 1000) + pricing[CHAT_MODEL]["completion"] * (tokens_output / 1000)
+            response_time = datetime.now(timezone.utc).timestamp() - response.created
+            self.log_api_call(CHAT_MODEL, amount={"input": tokens_input, "output": tokens_output}, cost=cost, response_time=response_time)
             
             return response.choices[0].message.content
         except Exception as e:
@@ -143,6 +139,7 @@ class GPTManager:
     async def speak(self, text):
         """Convert text to speech using OpenAI's TTS and play it"""
         speech_file_path = Path(__file__).parent / "used_files" / "speech.mp3"
+        start_time = datetime.now(timezone.utc).timestamp()
         try:
             response = await self.client.audio.speech.create(
                 model="tts-1",
@@ -151,7 +148,8 @@ class GPTManager:
             )
             
             cost = pricing[SPEAK_MODEL] * (len(text) / 1000)
-            self.log_api_call(SPEAK_MODEL, amount=len(text), cost=cost)
+            response_time = datetime.now(timezone.utc).timestamp() - start_time
+            self.log_api_call(SPEAK_MODEL, amount=len(text), cost=cost, response_time=response_time)
 
             async with aiofiles.open(speech_file_path, "wb") as audio_file:
                 await audio_file.write(response.content)
@@ -168,7 +166,8 @@ class GPTManager:
             )
 
             # Wait for the playback to finish
-            self.audio_playback_object.wait_done()
+            while self.audio_playback_object.is_playing():
+                await asyncio.sleep(0.1)
 
         except asyncio.CancelledError as e:
             # Propagate the error
@@ -197,6 +196,22 @@ class GPTManager:
         # Additional cleanup if necessary
         print("Stopped current interaction.")
 
+    def format_mixed_text(self, text):
+        """Format text containing both Hebrew and English, preserving correct direction for each."""
+        # Hebrew Unicode range (including punctuation)
+        hebrew_pattern = regex.compile(r'[\u0590-\u05FF\u200f\u200e]+[^\n]*')
+        
+        # Find all Hebrew text segments and wrap them with RTL markers
+        formatted_text = text
+        for match in hebrew_pattern.finditer(text):
+            hebrew_segment = match.group()
+            formatted_text = formatted_text.replace(
+                hebrew_segment,
+                f"\u202B{hebrew_segment}\u202C"
+            )
+            
+        return formatted_text
+
     async def inner_voices_response(self, user_input, ready_to_print):
         """Generate a response considering all inner voices in a single API call"""
         # Add printing context if ready to print
@@ -204,7 +219,8 @@ class GPTManager:
         naturally incorporate into your response that 
         you would like to create an artistic interpretation of our conversation. Make it feel 
         organic and tied to the emotional context of the dialogue. Don't make it sound like 
-        a sudden request - it should flow from the conversation naturally.
+        a sudden request - it should flow from the conversation naturally and should be an add on on interpulated in your response.
+        make sure your response is in hebrew.
         """ if ready_to_print else ""
 
         inner_voices_prompt = f"""
@@ -215,8 +231,8 @@ class GPTManager:
         4. A creative voice that reflects on the artistic process
 
         Your task is to merge these perspectives into a single, coherent response that incorporates elements from all voices.
-        The response should be in Hebrew and should feel natural, as if coming from a single, multi-faceted personality.
         {printing_context}
+        The response should be in Hebrew and should feel natural, as if coming from a single, multi-faceted personality.
         """
 
         # Add user input to the conversation history
@@ -236,18 +252,32 @@ class GPTManager:
         await self.lock.acquire()
         try:
             self.main_conversation.append({'role': 'assistant', 'content': final_response})
+            # Save conversation after update
+            await self.save_conversation()
         finally:
             self.lock.release()
+            
+        
 
-        print("Tamar 3D printer artist: " + final_response)
-        return final_response
+        formatted_response = self.format_mixed_text(final_response)
+        print("Tamar 3D printer artist: ")
+        print(formatted_response)
+        return formatted_response
 
     async def create_dalle_image(self, prompt):
         """Generate an image using DALL-E and log the cost."""
         print('Starting image creation')
         
         try:
-            image_path = Path(__file__).parent / "used_files" / "img.png"
+            # Create images directory if it doesn't exist
+            images_dir = Path(__file__).parent / "generated_images"
+            images_dir.mkdir(exist_ok=True)
+            
+            # Create timestamp for unique filename
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            image_path = images_dir / f"image_{timestamp}.png"
+            prompt_path = images_dir / f"prompt_{timestamp}.txt"
+            
             response = await self.client.images.generate(
                 model=DALL_E_MODEL,
                 prompt=prompt,
@@ -257,15 +287,20 @@ class GPTManager:
                 response_format="b64_json",
             )
 
-            cost = pricing[DALL_E_MODEL]
-            self.log_api_call(DALL_E_MODEL, amount=0, cost=cost)
-            
-            # Decode the base64 string to bytes
-            image_data = base64.b64decode(response.data[0].b64_json)
-            with open(image_path, "wb") as f:
-                f.write(image_data)
+            # Save the prompt
+            async with aiofiles.open(prompt_path, 'w', encoding='utf-8') as f:
+                await f.write(prompt)
 
-            print('Finished creating image')
+            cost = pricing[DALL_E_MODEL]
+            response_time = datetime.now(timezone.utc).timestamp() - response.created
+            self.log_api_call(DALL_E_MODEL, amount=0, cost=cost, response_time=response_time)
+            
+            # Decode and save the image
+            image_data = base64.b64decode(response.data[0].b64_json)
+            async with aiofiles.open(image_path, 'wb') as f:
+                await f.write(image_data)
+
+            print(f'Finished creating image: {image_path}')
             return image_path
         
         except Exception as e:
@@ -307,6 +342,7 @@ class GPTManager:
             "max_tokens": 300
         }
 
+        start_time = datetime.now(timezone.utc).timestamp()
         async with aiohttp.ClientSession() as session:
             async with session.post(
                 "https://api.openai.com/v1/chat/completions",
@@ -318,27 +354,26 @@ class GPTManager:
                 tokens_input = result['usage']['prompt_tokens']
                 tokens_output = result['usage']['completion_tokens']
                 cost = pricing[VISION_MODEL]["prompt"] * (tokens_input / 1000) + pricing[VISION_MODEL]["completion"] * (tokens_output / 1000)
-                self.log_api_call(VISION_MODEL, amount={"input": tokens_input, "output": tokens_output}, cost=cost)
+                response_time = datetime.now(timezone.utc).timestamp() - start_time
+                self.log_api_call(VISION_MODEL, amount={"input": tokens_input, "output": tokens_output}, cost=cost, response_time=response_time)
                 return result['choices'][0]['message']['content']
             
 
     async def generate_dalle_prompt(self):
-        """Generate a DALL-E prompt based on conversation history"""
+        """Generate a DALL-E prompt based on the last user message"""
+        # Get the last user message
+        last_user_message = None
+        for message in reversed(self.main_conversation):
+            if message['role'] == 'user':
+                last_user_message = message['content']
+                break
+        
         prompt_messages = [
             {'role': 'user', 'content': self.prompt_image},
+            {'role': 'user', 'content': f"Based on this user message: '{last_user_message}', generate a detailed prompt for DALL-E to create an image."}
         ]
         
-        for message in self.main_conversation:
-            if message['role'] == 'assistant' or message['role'] == 'user':
-                prompt_messages.append(message)
-        
-        prompt_messages.append({
-            'role': 'user', 
-            'content': 'Based on our conversation and the instructions provided, generate a detailed prompt for DALL-E to create an image.'
-        })
-        
         dalle_prompt = await self.generate_response(prompt_messages)
-        
         print(f"Generated DALL-E prompt: {dalle_prompt}")
         return dalle_prompt
 
@@ -346,7 +381,9 @@ class GPTManager:
         """Initialize Tamar's initial response and add it to the conversation."""
         self.initial_response = await self.generate_response(self.main_conversation)
         if self.initial_response:
-            print("Tamar's initial greeting:", self.initial_response)
+            formatted_response = self.format_mixed_text(self.initial_response)
+            print("Tamar's initial greeting:")
+            print(formatted_response)
             
         # play the initial response
         await self.speak(self.initial_response)
@@ -378,3 +415,11 @@ class GPTManager:
             return len(self.main_conversation)
         finally:
             self.lock.release()
+
+    async def save_conversation(self):
+        """Save the current conversation to a JSON file"""
+        try:
+            async with aiofiles.open(self.conversation_file, 'w', encoding='utf-8') as f:
+                await f.write(json.dumps(self.main_conversation, ensure_ascii=False, indent=2))
+        except Exception as e:
+            print(f"Error saving conversation: {e}")
