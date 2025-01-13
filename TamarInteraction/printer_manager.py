@@ -372,23 +372,9 @@ class RealPrinter(Printer):
                 f"G0 X{self.MAX_X/2} Y{self.MAX_Y/2} F3000",  # Move to center faster
             ]
             await self.send_commands(commands, wait=True)
-            
-            while True:
-                if self.printing_cancelled:
-                    break
+            await asyncio.sleep(20)  # Reduced sleep time for smoother movement
 
-                # Calculate new random point within safe bounds
-                margin = 10  # Safety margin from edges
-                next_x = random.uniform(margin, self.MAX_X - margin)
-                next_y = random.uniform(margin, self.MAX_Y - margin)
-
-                commands = [
-                    f"G1 X{min(next_x, self.MAX_X):.1f} Y{min(next_y, self.MAX_Y):.1f} F1500",
-                    "G4 P50"  # Shorter pause of 50ms for smoother movement
-                ]
-                await self.send_commands(commands, wait=True)
-                await asyncio.sleep(0.05)  # Reduced sleep time for smoother movement
-                
+                   
         except asyncio.CancelledError:
             raise
         except Exception as e:
