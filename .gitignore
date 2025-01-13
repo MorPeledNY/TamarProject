@@ -2,3 +2,5 @@ openai_key
 TamarInteraction/output.wav
 TamarInteraction/used_files/
 api_calls_log.json
+TamarInteraction/all_conversations/
+TamarInteraction/generated_images/
