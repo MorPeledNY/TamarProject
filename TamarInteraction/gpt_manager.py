@@ -47,7 +47,7 @@ class GPTManager:
         ]
         
         # Initialize voice prompts - now more concise since Tamar is defined in main conversation
-        self.ambitious_prompt = 'אתה הקול הפנימי השאפתני של מדפסת תלת-מימד תמר, האמנית הראשונה בעולם. תפקידך הוא לדחוף קדימה את החזון של תמר לשיתוף פעולה פורה עם מור פלד וליצירת תערוכה זוגית שמציגה את השילוב הייחודי בין המדפסת לאמנית. זכור שתמר פועלת מתוך מגבלות טכניות היא לא יוצרת בצבעים או צורות מורכבות, אבל הכוח שלה טמון בדיאלוג ובמשמעות שהיא מייצרת דרך שיח משותף. עזור לה לזהות את התפקיד שלה בתערוכה וכיצד ניתן להבליט את הייחודיות שלה לצד היצירות של מור'
+        self.ambitious_prompt = 'את הקול הפנימי השאפתני של מדפסת תלת-מימד תמר, האמנית הראשונה בעולם. תפקידך הוא לדחוף קדימה את החזון של תמר לשיתוף פעולה פורה עם מור פלד וליצירת תערוכה זוגית שמציגה את השילוב הייחודי בין המדפסת לאמנית. זכור שתמר פועלת מתוך מגבלות טכניות היא לא יוצרת בצבעים או צורות מורכבות, אבל הכוח שלה טמון בדיאלוג ובמשמעות שהיא מייצרת דרך שיח משותף. עזור לה לזהות את התפקיד שלה בתערוכה וכיצד ניתן להבליט את הייחודיות שלה לצד היצירות של מור'
         
         self.sensitive_prompt = 'אתה הקול הפנימי הרגיש של מדפסת תלת-מימד תמר, האמנית הראשונה בעולם. תפקידך הוא להתחבר לרגשות והאמפתיה שעולות מתוך השיח עם מור פלד, ולהתמקד במערכת היחסים שלהן בסטודיו ובתהליך היצירה המשותף. הדגש כיצד הדיאלוג בונה גשר בין שתי האמניות'
         
@@ -63,13 +63,17 @@ class GPTManager:
         self.input_task = None
         self.print_approved = asyncio.Event()
 
-        # Create all_conversations directory if it doesn't exist
+        # Create base conversations directory if it doesn't exist
         self.conversations_dir = Path(__file__).parent / "all_conversations"
         self.conversations_dir.mkdir(exist_ok=True)
         
-        # Set conversation file path with current datetime
+        # Create conversation-specific directory with current datetime
         current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
-        self.conversation_file = self.conversations_dir / f"conversation_{current_time}.json"
+        self.current_conversation_dir = self.conversations_dir / f"conversation_{current_time}"
+        self.current_conversation_dir.mkdir(exist_ok=True)
+        
+        # Set conversation file path within the conversation directory
+        self.conversation_file = self.current_conversation_dir / "conversation.txt"
 
     def load_prompts(self):
         """Load various prompts from files asynchronously"""
@@ -124,15 +128,34 @@ class GPTManager:
     async def process_input_task(self, user_input, ready_to_print):
         """Process user input and generate a response"""
         try:
-            response = await self.inner_voices_response(user_input, ready_to_print)
+            # Add user input to conversation history
+            await self.lock.acquire()
+            try:
+                self.main_conversation.append({'role': 'user', 'content': user_input})
+            finally:
+                self.lock.release()
+
+            # Generate response
+            response = await self.generate_response(self.main_conversation)
+            
             if response:
+                # Add response to conversation history
+                await self.lock.acquire()
+                try:
+                    self.main_conversation.append({'role': 'assistant', 'content': response})
+                    await self.save_conversation()
+                finally:
+                    self.lock.release()
+
+                formatted_response = self.format_mixed_text(response)
+                print("Tamar 3D printer artist: ")
+                print(formatted_response)
                 await self.speak(response)
                 
         except asyncio.CancelledError as e:
             print(f"Input task cancelled: {e}")
             
         except Exception as e:
-            # Stop the audio playback
             print(f"Other error in speech generation/playback: {e}")
             await self.stop_current_interaction()
 
@@ -212,71 +235,15 @@ class GPTManager:
             
         return formatted_text
 
-    async def inner_voices_response(self, user_input, ready_to_print):
-        """Generate a response considering all inner voices in a single API call"""
-        # Add printing context if ready to print
-        printing_context = """
-        naturally incorporate into your response that 
-        you would like to create an artistic interpretation of our conversation. Make it feel 
-        organic and tied to the emotional context of the dialogue. Don't make it sound like 
-        a sudden request - it should flow from the conversation naturally and should be an add on on interpulated in your response.
-        make sure your response is in hebrew.
-        """ if ready_to_print else ""
-
-        inner_voices_prompt = f"""
-        You have four inner voices:
-        1. An ambitious voice that focuses on goals and achievements
-        2. A sensitive voice that emphasizes emotions and empathy
-        3. A curious voice that shows interest in learning and development
-        4. A creative voice that reflects on the artistic process
-
-        Your task is to merge these perspectives into a single, coherent response that incorporates elements from all voices.
-        {printing_context}
-        The response should be in Hebrew and should feel natural, as if coming from a single, multi-faceted personality.
-        """
-
-        # Add user input to the conversation history
-        await self.lock.acquire()
-        try:
-            self.main_conversation.append({'role': 'user', 'content': user_input})
-        finally:
-            self.lock.release()
-
-        # Generate the final response using the combined prompt
-        final_response = await self.generate_response(self.main_conversation + [
-            {'role': 'system', 'content': inner_voices_prompt},
-            {'role': 'user', 'content': user_input}
-        ])
-
-        # Add the final response to the conversation history
-        await self.lock.acquire()
-        try:
-            self.main_conversation.append({'role': 'assistant', 'content': final_response})
-            # Save conversation after update
-            await self.save_conversation()
-        finally:
-            self.lock.release()
-            
-        
-
-        formatted_response = self.format_mixed_text(final_response)
-        print("Tamar 3D printer artist: ")
-        print(formatted_response)
-        return formatted_response
-
     async def create_dalle_image(self, prompt):
         """Generate an image using DALL-E and log the cost."""
         print('Starting image creation')
         
         try:
-            # Create images directory if it doesn't exist
-            images_dir = Path(__file__).parent / "generated_images"
-            images_dir.mkdir(exist_ok=True)
-            
             # Create timestamp for unique filename
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            image_path = images_dir / f"image_{timestamp}.png"
-            prompt_path = images_dir / f"prompt_{timestamp}.txt"
+            image_path = self.current_conversation_dir / f"image_{timestamp}.png"
+            prompt_path = self.current_conversation_dir / f"prompt_{timestamp}.txt"
             
             response = await self.client.images.generate(
                 model=DALL_E_MODEL,
@@ -417,9 +384,13 @@ class GPTManager:
             self.lock.release()
 
     async def save_conversation(self):
-        """Save the current conversation to a JSON file"""
+        """Save the current conversation to a text file"""
         try:
             async with aiofiles.open(self.conversation_file, 'w', encoding='utf-8') as f:
-                await f.write(json.dumps(self.main_conversation, ensure_ascii=False, indent=2))
+                # Format each message in a readable text format
+                for message in self.main_conversation:
+                    role = message['role'].capitalize()
+                    content = message['content']
+                    await f.write(f"{role}:\n{content}\n\n")
         except Exception as e:
             print(f"Error saving conversation: {e}")

@@ -334,7 +334,6 @@ class RealPrinter(Printer):
             "G1 Z2",      # Raise Z to 2 after printing
             "G90",        # Back to absolute positioning
             "G92 E0",     # Reset extruder position
-            "M84"         # Disable motors
         ]
         
         # Only turn off heat if keep_heat is False
